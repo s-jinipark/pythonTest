@@ -2,7 +2,7 @@ def func_a(n, ary):
     answer = [[0 for _ in range(n+1)] for _ in range(n+1)]
 
     for i in range(len(ary)):
-        answer[@@@] = @@@
+        answer[i] = @@@
 
     return answer
 
