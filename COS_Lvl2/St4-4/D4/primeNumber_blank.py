@@ -29,11 +29,13 @@ def solution(numbers):
     answer = 0
     primes =[]
     primes =  func_a(primes)  # 소수 배열 을 먼저 구하네
+    #perms = func_@@@(@@@)
     perms = func_b(numbers)
     print(perms)
     # 소수 구분 ??
     for num in perms:
-        if primes[num] == False :
+        #if @@@:
+        if primes[num] == True :
             answer = answer
         else:
             answer = answer + 1

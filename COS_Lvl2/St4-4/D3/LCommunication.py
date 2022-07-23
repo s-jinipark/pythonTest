@@ -1,8 +1,9 @@
 def func_a(n, ary):
     answer = [[0 for _ in range(n+1)] for _ in range(n+1)]
 
-    for i in range(len(ary)):
-        answer[i] = @@@
+    for i in range(len(ary)):  # 2차원 배열인데. ?
+        #answer[@@@] = @@@
+        answer[ ary[i][0] ][ ary[i][1] ] = ary[i][2]
 
     return answer
 
@@ -24,16 +25,19 @@ def func_c(visited, ary, n, current, cnt, time):
 
         visited[i] = True
         time += ary[current][i]
-        ret = min(ret, func_@@@(@@@))
+        #ret = min(ret, func_@@@(@@@))
+        #ret = min(ret, func_c(visited, ary, n, current, cnt, time))  # 배껴서 했는데 아님
+        ret = min(ret, func_c(visited, ary, n, i, cnt+1, time))
         time -= ary[current][i]
         visited[i] = False
 
     return ret
 
 def solution(works, schedule):
-    answwer = 0
+    answer = 0
     visited = [False for i in range(works+1)]
     matrix = func_a(works, schedule)
+    print(matrix)
     answer = func_c(visited, matrix, works, 1, 1, 0)
 
     return answer

@@ -11,7 +11,7 @@ def solution(w, h):
 
     tree_w = w // gcd(w, h)
     tree_h = h // gcd(w, h)
-
+    print('>', tree_w, tree_h)
     answer = (tree_h *2) + (tree_w *2)
 
     return answer
