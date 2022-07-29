@@ -11,7 +11,7 @@ def solution(w, h):
 
     tree_w = w // gcd(w, h)
     tree_h = h // gcd(w, h)
-    print('>', tree_w, tree_h)
+    print('>', tree_w, tree_h)  # w 와 h 가 각각이라구 ?? 문제 헛갈림
     answer = (tree_h *2) + (tree_w *2)
 
     return answer

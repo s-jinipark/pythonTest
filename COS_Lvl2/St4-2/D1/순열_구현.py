@@ -4,7 +4,7 @@
 # visit1 = [False for _ in range(len(nums))]
 # permu1(nums, ans, 4, 2)
 
-def permu1(nums, ans, n, r):  #nums, ans [],  n -> 4  r -> 2   -> #nums, ans [1],  n -> 4  r -> 2
+def permu1(nums, ans, n, r):    #nums, ans [],  n -> 4  r -> 2 (시작)  ->  #nums, ans [1],  n -> 4  r -> 2 (ans 가 다름)
     global visit1
     if len(ans) == r:
         for i in ans:
@@ -15,7 +15,7 @@ def permu1(nums, ans, n, r):  #nums, ans [],  n -> 4  r -> 2   -> #nums, ans [1]
     for i in range(n):
         if visit1[i] == False:
             visit1[i] = True
-            ans.append(nums[i])  # [1]  -> [1, 4]
+            ans.append(nums[i])  # [1]  -> [1, 3] -> 계속 바뀜
             permu1(nums, ans, n, r)
             visit1[i] = False
             ans.pop()
@@ -65,13 +65,13 @@ permu1(nums, ans, 4, 3)
 print()
 
 # 2. 순열(Permutation) - 재귀 호출로 사용 여부 결정하는 방법   nPr
-print("# 2. 순열(Permutation) - 재귀 호출로 사용 여부 결정하는 방법   nPr")
-permu2(nums, 4, 2, 0)
-print()
+# print("# 2. 순열(Permutation) - 재귀 호출로 ( & swap ) 사용 여부 결정하는 방법   nPr")
+# permu2(nums, 4, 2, 0)
+# print()
 
 # 3. 중복 순열
-ans2 = []
-print("# 3. 중복 순열")
-repermutation(nums,ans2, 4, 2)
+# ans2 = []
+# print("# 3. 중복 순열")
+# repermutation(nums,ans2, 4, 2)
 
 

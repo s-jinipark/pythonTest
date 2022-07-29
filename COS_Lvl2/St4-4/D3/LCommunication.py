@@ -26,8 +26,8 @@ def func_c(visited, ary, n, current, cnt, time):
         visited[i] = True
         time += ary[current][i]
         #ret = min(ret, func_@@@(@@@))
-        #ret = min(ret, func_c(visited, ary, n, current, cnt, time))  # 배껴서 했는데 아님
-        ret = min(ret, func_c(visited, ary, n, i, cnt+1, time))
+        #ret = min(ret, func_c(visited, ary, n, current, cnt, time))  # 베껴서 했는데 아님
+        ret = min(ret, func_c(visited, ary, n, i, cnt+1, time))  # 해답 봄
         time -= ary[current][i]
         visited[i] = False
 

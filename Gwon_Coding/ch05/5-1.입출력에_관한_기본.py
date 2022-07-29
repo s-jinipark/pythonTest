@@ -14,6 +14,7 @@ print("3. 리스트를 통해 한줄을 입력 받기")
 #print(num)
 
 print("4. 한 줄로 문자열 변수 여러 개를 입력 받기")
+# [문자열이라 여긴 map 없이..]
 # 입력 : abc def
 #a, b = input().split()
 #print(a, b)
@@ -37,4 +38,6 @@ print("7. 2차원 배열을 입력 받기")
 # 입력 : 1 2 3 4 5
 #       6 7 8 9 10
 #       5 4 3 2 1
+
+#변수명=[list(map(int,input().split() )) for _ in range(3)]
 

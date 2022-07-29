@@ -18,5 +18,5 @@ a, b = 5, 4
 print(sum(a,b))
 print(sub(a,b))
 print(mul(a,b))
-print(div(a,b))  # 몫
+print(div(a,b))  # 나눗셈 값
 print(sur(a,b))  # 나머지

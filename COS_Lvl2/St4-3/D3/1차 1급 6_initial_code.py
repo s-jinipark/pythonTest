@@ -42,8 +42,8 @@ def solution(pos):
                         cnt += 1
                     if 0 <= row2 + pos_x[i] + 1 < 8 :
                         cnt += 1
-    print(cnt)
-
+    #print(cnt)
+    answer = cnt
     return answer
 
 #아래는 테스트케이스 출력을 해보기 위한 코드입니다.

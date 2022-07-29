@@ -2,7 +2,7 @@ def solution(grid):
     answer = 0
     for i in range(4):
         for j in range(4):
-            for k in range(j + 1, 4, 2):
+            for k in range(j + 1, 4, 2):  # 점선에 따라 접는 모양
                 #answer = max(answer, max(grid[i][j] + grid[j][k], grid[j][k] + grid[k][i]))
                 #answer = max(answer, max(grid[i][j] + grid[k][j], grid[i][j] + grid[i][k]))  # 55 나왔지만..ㅠ
                 answer = max(answer, max(grid[i][j] + grid[i][k], grid[j][i] + grid[k][i]))
