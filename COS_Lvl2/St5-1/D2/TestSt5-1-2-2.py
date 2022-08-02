@@ -11,22 +11,24 @@ graph = [
     [2, 6, 7]   # 8
 ]
 
-# 방문
-visited = [False] * 9  # 하나 커야 됨
+
+# 재차 연습 -->
+visited =[False] *9
 
 def bfs(v) :
-    # 큐 만들고
     q = []
     q.append(v)
     visited[v] = True
 
     while len(q) > 0 :
-        q.pop()
         tmp = q.pop(0)
-        print(tmp, " ", end="")
-        for i in graph[v] :
-            if not visited[i] :
-                bfs(i)
+        print(tmp, end=' ')
+        for i in graph[tmp] :
+            if visited[i] is False :
+                q.append(i)
+                visited[i] = True
 
 bfs(1)
+
+# //<--
 
