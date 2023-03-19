@@ -1,59 +1,42 @@
 
-# 큐를 통해 사용하는 기능은  6 가지
-# 1. push : 데이터를 큐에 추가한다
-# 2. pop : 큐의 가장 앞 단 데이터를 삭제한다
-# 3. size : 큐에 데이터가 몇 개 들어 있는지 확인한다
-# 4. empty : 큐가 비어 있는지 확인한다
-# 5. front : 큐의 가장 앞 데이터가 무엇인지 확인한다
-# 4. backs : 큐의 가장 뒤 데이터가 무엇인지 확인한다
-
-import sys
 from collections import deque
 
-sys.stdin = open("input8-2.txt", "rt")
-n = int(input())  # n
+N = 4
 
-command = []
-for i in range(n):
-   command.append(input())
+queue = deque()
 
-print(command)
+# for i in range(1, N+1):
+#     queue.append(i)
+# 1번 카드가 맨 위
+for i in range(N):
+    queue.append(N-i)
 
-queue = deque([])  # 이렇게 ?
-
-for i in range(n):
-    tmp_comm_arr = command[i].split()
-    if tmp_comm_arr[0] == 'push' :
-        queue.append(tmp_comm_arr[1])
-    elif tmp_comm_arr[0] == 'pop' :
-        #if len(queue) == 0 :
-        if not queue :  # 책엔 이렇게 하네...
-            print(-1)
-        else :
-            #print(queue.pop())  # 이거는 스택같이 됨
-            print(queue.popleft())
-    elif tmp_comm_arr[0] == 'size' :
-        print( len(queue) )
-    elif tmp_comm_arr[0] == 'empty' :
-        if not queue :  # 책엔 이렇게 하네...
-            print(1)
-        else :
-            print(0)
-    elif tmp_comm_arr[0] == 'front' :
-        if not queue :  # 책엔 이렇게 하네...
-            print(-1)
-        else :
-            print(queue[0])
-    elif tmp_comm_arr[0] == 'back' :
-        if not queue :  # 책엔 이렇게 하네...
-            print(-1)
-        else :
-            print(queue[-1])
-
-#print(queue)
+print(queue)
 
 '''
-배열로도 할 수 있는데 왜 큐를 써야 하지?
-배열을 이용하여 큐의 기능을 구현한다면 먼저 삽입된 데이터가 삭제될 때마다
-O(데이터의 크기) 가 소요되기 때문 
+카드가 한장 남을 때까지 반복
+ 1. (홀) 제일 위에 있는 카드를 바닥에 버린다
+ 2. (짝) 제일 위에 있는 카드를 제일 아래에 ..
+
+( cnt 1 로 셋팅하고  홀/짝 다르게 수행)
 '''
+# cnt = 1
+# while (len(queue) > 1) :
+#     tmp = queue.popleft()
+#     if cnt%2 == 0 :  # 짝수
+#         queue.append(tmp)
+#     cnt += 1
+# print(queue)
+
+print("--------------------")
+'''
+  이거 뭐 홀짝 나눌 필요 없이 연달아 하면 됨
+  제일 위를 뽑는 거임 -> 잘 읽어야 될 듯
+'''
+while len(queue) > 1 :
+    queue.pop()
+    queue.appendleft(queue.pop())
+    #print(queue)
+
+print(queue)
+print(queue.popleft())

@@ -7,13 +7,46 @@
 # 4. size : 스택에 데이터가 몇 개 들어 있는지 확인한다
 # 5. empty : 스택이 비어 있는지 확인한다
 
+
 # 7-4 스택을 사용하는 예제 1
 
-import sys
+N = 14
+f = open("input7-4.txt", "rt")
+line = None
+stk = []
 
-sys.stdin = open("input7-4.txt", "rt")
-n = int(input())  # N 명
 
+#while line != '':  # 이상함.. 이렇게 하면 아래 코드로 진행됨
+while True:
+    line = f.readline()
+    #print(line, end='')
+    if line == '':
+        break
+    # a1, a2 = line.split()
+    command = line.split()  # 한번에 추출해서 .. 처리(책보고 개선)
+    #print('->', command)
+
+    if command[0] == 'push' :   # 정수 를 스택에 넣는 연산
+        #print(command[1])
+        stk.append(int(command[1]))
+    elif command[0] == 'top':   # 스택의 가장 위에 있는 정수를 출력. 없을 시 -1
+        print(stk[-1])
+    elif command[0] == 'size':  # 스택에 들어 있는 정수의 개수를 출력
+        print(len(stk))
+    elif command[0] == 'empty': # 스택이 비어 있으면 1, 아니면 0 을 출력
+        if len(stk) == 0:
+            print(1)
+        else :
+            print(0)
+    elif command[0] == 'pop': # 스택의 가장 위에 있는 정수를 출력, 정수가 없을 경우 -1 출력
+        if len(stk) == 0:
+            print(-1)
+        else :
+            print(stk.pop())
+
+f.close()
+
+# ----------------------------------------
 # 7-5 스택을 사용하는 예제 2
 # 쇠막대기 문제
 # 여러 개의 쇠막대기를 레이저로 절단
@@ -105,4 +138,6 @@ print('>', ans2)
 # 계속 큰 수가 오면 스택에 쌓고
 # 단순하게 스택 상단 보다 크고, 다음 오는 수보다 크면 선택했는데
 # 그 외 (계속 더 큰 수만 올때의 처리...) 잘 모름
+
+### 틀림 !!!
 
