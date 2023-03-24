@@ -1,6 +1,6 @@
 
 # 문제 004 > 구간 합 구하기 2
-#
+# X 는 행, Y 는 열을 의미한다
 
 inp1 = "4 3"
 n, quizNo = map(int, inp1.split())
