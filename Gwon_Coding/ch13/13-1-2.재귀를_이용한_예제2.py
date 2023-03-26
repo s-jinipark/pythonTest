@@ -29,3 +29,18 @@ hanoi(3, 1,2,3)
 따라서 이 알고리즘은 다음과 같은 재귀 함수로 구현할 수 있습니다.
 
 '''
+# 다른 풀이 (https://soohyun6879.tistory.com/190)
+print('##### 연습 ')
+num = 4
+
+def hanoi2(n, p_from, p_to, p_mid) :
+    if n == 1 :  # 원반이 1개이면 무조건 원반을 1번에서 3번으로 옮긴다
+        print(p_from, p_to)
+        return
+
+    hanoi2(n-1, p_from, p_mid, p_to) # 1번 기둥의 n-1 개의 원반을 2번 기둥으로 옮긴다
+    print(p_from, p_to) # 1번 기둥에 남아 있는 가장 큰 원반을 3번 기둥으로 옮긴다
+    hanoi2(n-1, p_mid, p_to, p_from) # 2번 기둥의 n-1 개의 원반을 3번 기둥으로 옮긴다
+
+print(2**num-1)
+hanoi2(num, 1,3,2)
