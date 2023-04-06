@@ -1,12 +1,11 @@
 
-def facto(n) :
-
-    if n == 1 :
+def facto(v):
+    if v == 1:
         return 1
     else :
-        return n * facto(n-1)
+        return v * facto(v-1)
 
-res = facto(2)
+res = facto(6)
 print(res)
 
 '''
@@ -26,13 +25,13 @@ print('--------------------')
 
 '''
 
-def hanoi(num, start, to, end) :
+def hanoi(num, start, to, end):
     if num == 1 :
         print(start, end)
-    else :
+    else:
         hanoi(num-1, start, end, to)
         print(start, end)
         hanoi(num-1, to, start, end)
 
-num = 3
-hanoi(num, 1,2,3)
+num = 2
+hanoi(num, 1, 2, 3)

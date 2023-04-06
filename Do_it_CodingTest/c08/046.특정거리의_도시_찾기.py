@@ -40,4 +40,34 @@ print(visted)
 ######################### 책 조금씩 참고하면서 했는데, 위 [여기] 참조
 print('#########################')
 
+#A2 = [[] for _ in range(N+1)]  # N+1 의 이유는 index 와 노드의 번호를 맞추기 위해...
+#print(A2)
+print(A)   #  이미 읽은 값 활용
+visted = [-1 for _ in range(N+1)]
+print(visted)
 
+queue = deque()
+
+def BFS(v):
+    queue.append(v)  # 일단 넣고
+    visted[v] += 1  # 방문도 chk
+    while queue :
+        now_node = queue.popleft()  # 이제 꺼내야지...
+        for i in A[now_node]:
+            print(i)
+            if visted[i] == -1:
+                queue.append(i)
+                visted[i] = visted[now_node] + 1
+
+BFS(X)
+print(visted)
+
+for i in range(N+1):  # 여기도 +1 까지
+    #print(visted[i])
+    if visted[i] == K:
+        print(i)
+
+''' 조건에 맞지 않을 경우 -1 을 출력해야 하므로
+    answer 라는 list 에 넣고
+    list 에 값이 없을 경우 -1 출력 하는 과정 거침
+'''

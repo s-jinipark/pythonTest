@@ -4,14 +4,74 @@
 n = 5
 inp = "20 10 35 30 7"
 
-lst1 = inp.split()
-print(lst1)  #-> 문자열로 들어 감
-lst2 = map(int, inp.split())
-print(lst2)  #-> <map object at 0x000002BED5027670>  (이런 식으로 나옴)
-lst3 = list(map(int, inp.split()) )
-print(lst3)
+lst = list(map(int, inp.split()))
+print(lst)
 
-print(min(lst3))
-print(max(lst3))
-#-> 함수 사용하면 이렇게 간편
+min_val = lst[0]
+max_val = lst[0]
+
+for i in range(1, n):
+    if lst[i] < min_val :
+        min_val = lst[i]
+    elif lst[i] > max_val :
+        max_val = lst[i]
+
+print(min_val, max_val)
+
+print('####################')
+
+import sys
+
+sys.stdin = open("input_6.1_2.txt", "rt")
+'''
+t_list = [[] for _ in range(5)]  # 일단 5개 만든다
+r_list = [0 for _ in range(5)]
+print(t_list, r_list)
+
+for i in range(5):
+    tmp_list = list(map(int, input().split()))
+    print(tmp_list)
+    t_list[i] = tmp_list
+print(t_list)
+
+top_sum = 0  # 최고 점수
+top_no = 0  # 우승자 번호
+
+# 넣으면서 해도 될 것 같지만
+for i in range(5):
+    tmp_sum = 0
+    for j in t_list[i]:
+        tmp_sum += j
+    if tmp_sum > top_sum:
+        top_sum = tmp_sum
+        top_no = i +1
+print(top_no, top_sum)
+'''
+
+# 여기서는 한번에 받는다
+human=[list(map(int, input().split()) ) for _ in range(5)]
+
+humanScore = [0] * 5
+
+print(human, ' - ', humanScore)
+
+score = 0  # 최대 점수 저장
+
+for i in range(5):  # 5명이라고 조건이 주어짐
+    sum = 0
+    for j in range(4):  # 자신 빼고니까-> 4
+        sum += human[i][j]
+    humanScore[i] = sum
+    score = max(score, sum)  # [괄호] 넣기에 이거 많이 나오는 듯
+
+#print(score)
+for i in range(5):
+    if humanScore[i] == score :
+        print(i+1, score)
+        break
+
+print('####################')
+
+inp1 = '4 2'
+inp2 = '1924'
 
