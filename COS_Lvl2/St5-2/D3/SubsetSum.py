@@ -8,12 +8,11 @@ def subset(i, sumValue):
     if sumValue > W:
         return
 
-    # if sumValue == W:
-    #     answer += 1
-    # elif i <len(w)-1:
-    #     @@@
-
-
+    if sumValue == W:
+        answer += 1
+    elif i <len(w)-1:
+        subset(i+1, sumValue)
+        # 1차로 적은 답
 
 def solution(product, K):
     global w, check, W, total, answer

@@ -1,0 +1,46 @@
+[COS Pro 올인원 새싹 패키지 - 개발직무/Python] 4주차
+
+
+✅ 1일 : '문자열 내 마음대로 정렬하기', '문자열 내림차순으로 배치하기' 풀기
+- 제공 파일(문제/코드) 다운 받기(오른쪽 .zip 파일 클릭) : 문자열내림차순배치_정렬풀기.zip
+- 모범 코드 파일 다운 받기(오른쪽 .zip 파일 클릭) : 문자열내림차순배치_정렬솔루션.zip
+- '문자열 내 마음대로 정렬하기' 해설 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=R7_f1yovYps
+
+- '문자열 내림차순으로 배치하기' 해설 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=H46BKPDS0aQ
+
+
+
+✅ 2일 : '완주하지 못한 선수', '핸드폰 번호 가리기' 풀기
+- 제공 파일(문제/코드) 다운 받기(오른쪽 .zip 파일 클릭) : 완주_핸드폰풀기.zip
+- 모범 코드 파일 다운 받기(오른쪽 .zip 파일 클릭) : 완주_핸드폰솔루션.zip
+- '완주하지 못한 선수' 해설 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=NDXSS58dnmU
+
+- '핸드폰 번호 가리기' 해설 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=ZFY7wttyGWE
+
+
+
+✅ 3일 : 'K번째 수' 풀기
+- 제공 파일(문제/코드) 다운 받기(오른쪽 .zip 파일 클릭) : K번째수풀기.zip
+- 모범 코드 파일 다운 받기(오른쪽 .zip 파일 클릭) : K번째수솔루션.zip
+- 'K번째 수' 해설 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=gD9ozrzPgzU
+
+
+
+✅ 4일 : '예상 대진표' 풀기
+- 제공 파일(문제/코드) 다운 받기(오른쪽 .zip 파일 클릭) : 예상대진표풀기.zip
+- 모범 코드 파일 다운 받기(오른쪽 .zip 파일 클릭) : 예상대진표솔루션.zip
+- '예상 대진표' 해설 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=Nnvvaf1VJrs
+
+
+
+✅ 5일 : '올바른 괄호' 풀기
+- 제공 파일(문제/코드) 다운 받기(오른쪽 .zip 파일 클릭) : 올바른괄호풀기.zip
+- 모범 코드 파일 다운 받기(오른쪽 .zip 파일 클릭) : 올바른괄호솔루션.zip
+- '올바른 괄호' 해설 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=f7gOZTFgl6o

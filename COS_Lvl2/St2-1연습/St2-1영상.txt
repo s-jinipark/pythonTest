@@ -1,0 +1,42 @@
+[COS Pro 올인원 새싹 패키지 - 개발직무/Python] 3주차 (2단계 학습 가이드 포함)
+
+✅ 2단계 학습 시작에 앞서...
+- 하단의 '2단계 안내 영상 보러 가기>>' 를 클릭하여 2단계 학습 방법에 대해 반드시 학습하시기 바랍니다.
+   2단계 안내 영상 보러가기 >>
+https://www.youtube.com/watch?v=3W58iF0pnkI
+
+
+✅ 1일 : 리스트에 대해 학습하기
+- 제공 파일(코드) 다운 받기(오른쪽 .zip 파일 클릭) : 이차원리스트활용코드.zip
+- 리스트 학습 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=Je9CmRyqElM
+
+
+✅ 2일 : 정렬에 대해 학습하기
+- 제공 파일(코드) 다운 받기(오른쪽 .zip 파일 클릭) : 정렬코드.zip
+- 정렬 학습 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=er_pXyZ08z0
+
+
+✅ 3일 : 문자열에 대해 학습하기
+- 제공 파일(코드) 다운 받기(오른쪽 .zip 파일 클릭) : 문자열코드.zip
+- 문자열 학습 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=2oxlrjGw5vE
+(외부 유튜브)
+
+
+✅ 4일 : 클래스에 대해 학습하기
+- 오늘은 제공 파일(코드)이 없습니다 (웃음)
+- 클래스 학습 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=NsRp_Px3GKA
+(외부 유튜브)
+
+
+✅ 5일 : 나누어 떨어지는 숫자 배열, 두 정수 사이의 합 풀기
+- 제공 파일(문제/코드) 다운 받기(오른쪽 .zip 파일 클릭) : 두정수합_나누어떨어지는숫자배열풀기.zip
+- 모범 코드 파일 다운 받기(오른쪽 .zip 파일 클릭) : 두정수합_나누어떨어지는숫자배열솔루션.zip
+- '나누어 떨어지는 숫자 배열' 해설 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=eOwMZbvOTrU
+
+- '두 정수 사이의 합' 해설 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=gq8_DrQoAbc

@@ -26,5 +26,6 @@ vertex = [[1, 2],[1, 7], [2, 8], [7, 8], [7, 3], [7, 5], [8, 6], [5, 6], [5, 3],
 cnt = 8
 visited = [False for _ in range(cnt+1)]
 graph = makegraph(cnt, vertex)
+print(graph) # 2차원 배열에 적재 (연결이 있으면 1로 표시)
 bfs(graph, 1, cnt, visited)
 print()                       # 1  2  7  8  3  5  6  4

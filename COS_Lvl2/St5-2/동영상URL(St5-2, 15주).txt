@@ -1,0 +1,19 @@
+
+St5-1 해당 ------------------------------
+
+[COS Pro 올인원 새싹 패키지 - 개발직무/Python] 15주차
+
+✅ 1일 : 'Land Count_BFS' 풀기
+https://www.youtube.com/watch?v=OiYAR93Exc8
+
+
+✅ 2일 : '서울에서 부산까지' 풀기
+https://www.youtube.com/watch?v=8IHmDf2Ct90
+
+
+✅ 3일 : '부분집합합_백트래킹' 풀기
+https://www.youtube.com/watch?v=ZiLQTVcTHyQ
+
+
+✅ 4일 : COS Pro 1급 샘플 문제 5차 7번 풀기
+https://www.youtube.com/watch?v=m3NVvBBP_DM

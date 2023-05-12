@@ -1,0 +1,26 @@
+
+St5-1 해당 ------------------------------
+
+[COS Pro 올인원 새싹 패키지 - 개발직무/Python] 14주차 (5단계 학습 가이드 포함)
+
+✅ 5단계 학습 시작에 앞서...
+https://www.youtube.com/watch?v=aQjW3dnRLGw
+
+
+✅ 1일 : DFS/BFS에 대해 학습 영상으로 학습하기
+https://www.youtube.com/watch?v=vqDHdgI_S4A
+
+
+✅ 2일 : DFS/BFS 코드 직접 작성하기
+
+
+✅ 3일 : 백트래킹에 대해 학습하기
+https://www.youtube.com/watch?v=WGGi5cKvhAA
+
+
+✅ 4일 : '타겟 넘버' 풀기
+https://www.youtube.com/watch?v=2a4MI9We5mQ
+
+
+✅ 5일 : 'Land Count_DFS' 풀기
+https://www.youtube.com/watch?v=Csbk__0He0U

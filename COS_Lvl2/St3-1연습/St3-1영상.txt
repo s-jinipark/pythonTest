@@ -1,0 +1,59 @@
+[COS Pro 올인원 새싹 패키지 - 개발직무/Python] 6주차 (3단계 학습 가이드 포함)
+
+
+✅ 1일 : 3단계 학습 시작에 앞서...
+- 하단의 '3단계 안내 영상 보러 가기>>' 를 클릭하여 3단계 학습 방법 및 COS Pro 1급 문제 유형에 대해 반드시 학습하시기 바랍니다.
+   .3단계 안내 영상 보러가기 >>
+   https://www.youtube.com/watch?v=jtKe7JQ5Ijg
+
+   .1급 문제 유형 알아보기>>
+
+
+
+✅ 2일 : COS Pro 1급 샘플 문제 1차 2번 ~ 4번 풀기
+- 제공 파일(문제/코드) 다운 받기(오른쪽 .zip 파일 클릭) : 1급샘플문제1차2번~4번풀기.zip
+- 모범 코드 파일 다운 받기(오른쪽 .zip 파일 클릭) : 1급샘플문제1차2번~4번솔루션.zip
+- 샘플 문제 1급 1차 2번 해설 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=-czyPbWtG5Q
+
+- 샘플 문제 1급 1차 3번 해설 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=UXnUG6F7F0M
+
+- 샘플 문제 1급 1차 4번 해설 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=vxE87zL-RYM
+
+
+
+✅ 3일 : COS Pro 1급 샘플 문제 1차 7번 ~ 8번 풀기
+- 제공 파일(문제/코드) 다운 받기(오른쪽 .zip 파일 클릭) : 1급샘플문제1차7번~8번풀기.zip
+- 모범 코드 파일 다운 받기(오른쪽 .zip 파일 클릭) : 1급샘플문제1차7번~8번솔루션.zip
+- 샘플 문제 1급 1차 7번 해설 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=Mv2jn-_4AqM
+
+- 샘플 문제 1급 1차 8번 해설 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=H1YBuFwBmec
+
+
+
+✅ 4일 : COS Pro 1급 샘플 문제 1차 9번 ~ 10번 풀기
+- 제공 파일(문제/코드) 다운 받기(오른쪽 .zip 파일 클릭) : 1급샘플문제1차9번~10번풀기.zip
+- 모범 코드 파일 다운 받기(오른쪽 .zip 파일 클릭) : 1급샘플문제1차9번~10번솔루션.zip
+- 샘플 문제 1급 1차 9번 해설 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=2uoZYORQHcU
+
+- 샘플 문제 1급 1차 10번 해설 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=H1YBuFwBmec
+
+
+
+✅ 5일 : COS Pro 1급 샘플 문제 2차 2번 ~ 4번 풀기
+- 제공 파일(문제/코드) 다운 받기(오른쪽 .zip 파일 클릭) : 1급샘플문제2차2번~4번풀기.zip
+- 모범 코드 파일 다운 받기(오른쪽 .zip 파일 클릭) : 1급샘플문제2차2번~4번솔루션.zip
+- 샘플 문제 1급 2차 2번 해설 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=eHPQO798BR4
+
+- 샘플 문제 1급 2차 3번 해설 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=ss4Tiz3vkw4
+
+- 샘플 문제 1급 2차 4번 해설 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=6M9MfuF-ca8

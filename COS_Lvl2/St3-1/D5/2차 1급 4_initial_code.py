@@ -10,6 +10,7 @@ def solution(arr, K):
         for j in range(i+1, n):
             for k in range(j+1, n):
                 if (arr[i]+arr[j]+arr[k]) % K == 0 :
+                    print(arr[i], arr[j], arr[k])
                     answer += 1
     return answer
 

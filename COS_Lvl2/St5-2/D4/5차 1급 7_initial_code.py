@@ -14,7 +14,7 @@ def merge(parent, u, v):
 
 def solution(n, connections):
     answer = 0
-    parent = @@@
+    parent = find() #@@@
     for i, connection in enumerate(connections):
         if merge(parent, connection[0], connection[1]):
             answer = i + 1

@@ -25,8 +25,10 @@ def solution(arrA, arrB):
 
 
 #아래는 테스트케이스 출력을 해보기 위한 코드입니다.
-arrA = [-2, 3, 5, 9]
-arrB = [0, 1, 5]
+arrA = [-2, 4, 5, 9]
+arrB = [1, 3, 10]
+#arrA = [-2, 3, 5, 9]
+#arrB = [0, 1, 5]
 ret = solution(arrA, arrB)
 
 #[실행] 버튼을 누르면 출력 값을 볼 수 있습니다.

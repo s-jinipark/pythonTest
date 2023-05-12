@@ -3,17 +3,23 @@ N = 0
 
 def dfs(idx, total, target_val) :
     global answer
+    for i in range(idx):
+        print(' ', end=' ')
+    print(idx, total)
     if (idx == N and target_val == total):
         answer += 1
+        print('**')
         return
     if (idx == N):
         return
-    #print(idx, total + arr[idx])
+    #print(idx, total)
     #print(total + arr[idx], end=' ')
     dfs(idx+1, total + arr[idx], target_val)
-    #print(total + arr[idx], end=' ')
+
+    #print(idx, total - arr[idx])
     dfs(idx+1, total - arr[idx], target_val)
     #print( arr[idx], end=' ')
+
 def solution(numbers, target):
     #answer = 0
     global arr, N
@@ -31,16 +37,18 @@ def solution(numbers, target):
 numbers = [1,1,1,1,1]
 target = 3
 
-res = solution(numbers,target)
-print(res)
+#res = solution(numbers,target)
+#print(res)
 
 #sample 2
+# numbers = [1,1,1]
+# target = 1
 numbers = [1,1,1]
-target = 1
+target = 3
 
 #sample 3
 # numbers = [2, 2, 2, 2, 2]
 # target = 10
 
 res = solution(numbers,target)
-print(res)
+print('>', res)

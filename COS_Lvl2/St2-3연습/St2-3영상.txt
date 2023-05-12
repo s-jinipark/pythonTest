@@ -1,0 +1,49 @@
+[COS Pro 올인원 새싹 패키지 - 개발직무/Python] 5주차
+
+
+✅ 1일 : '영어 끝말 잇기' 풀기
+- 제공 파일(문제/코드) 다운 받기(오른쪽 .zip 파일 클릭) : 영어끝말잇기풀기.zip
+- 모범 코드 파일 다운 받기(오른쪽 .zip 파일 클릭) : 영어끝말잇기솔루션.zip
+- '영어 끝말 잇기' 해설 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=nKmbzF4Ia7w
+
+
+
+✅ 2일 : 'Snail 행렬' 풀기
+- 제공 파일(문제/코드) 다운 받기(오른쪽 .zip 파일 클릭) : snailArray풀기.zip
+- 모범 코드 파일 다운 받기(오른쪽 .zip 파일 클릭) : snailArray솔루션.zip
+- 'Snail 행렬' 해설 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=EMS236Ukzws
+
+
+
+✅ 3일 : '문자열 사용 빈도' 풀기
+- 제공 파일(문제/코드) 다운 받기(오른쪽 .zip 파일 클릭) : Wordlist풀기.zip
+- 모범 코드 파일 다운 받기(오른쪽 .zip 파일 클릭) : Wordlist솔루션.zip
+- '문자열 사용 빈도' 해설 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=jQDefhxGXrY
+
+
+
+✅ 4일 : COS Pro 1급 샘플 문제 1차 1번, 2차 1번, 3차 10번 (클래스 문제) 풀기
+- 제공 파일(문제/코드) 다운 받기(오른쪽 .zip 파일 클릭) : 1급샘플1차1번2차1번3차10번풀기.zip
+- 모범 코드 파일 다운 받기(오른쪽 .zip 파일 클릭) : 1급샘플1차1번2차1번3차10번솔루션.zip
+- 샘플 문제 1급 1차 1번 해설 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=bflbX5IJYdo
+
+- 샘플 문제 1급 2차 1번 해설 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=q2uLtouy7dM
+
+- 샘플 문제 1급 3차 10번 해설 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=W6F6XwPuPP8
+
+
+
+✅ 5일 : COS Pro 1급 샘플 문제 4차 7번, 5차 10번 (클래스 문제) 풀기
+- 제공 파일(문제/코드) 다운 받기(오른쪽 .zip 파일 클릭) : 1급샘플4차7번5차10번풀기.zip
+- 모범 코드 파일 다운 받기(오른쪽 .zip 파일 클릭) : 1급샘플4차7번5차10번솔루션.zip
+- 샘플 문제 1급 4차 7번 해설 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=q834TTRh1QA
+
+- 샘플 문제 1급 5차 10번 해설 영상 보기 : 영상 보기 Click>>
+https://www.youtube.com/watch?v=OQ3gl3b3pTI
