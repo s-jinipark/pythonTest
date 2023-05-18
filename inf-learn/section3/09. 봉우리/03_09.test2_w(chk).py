@@ -1,5 +1,5 @@
 
-# 확인 필요
+# ***** 확인 필요
 
 def beauti_prt(x):
     for i in range(len(x)):
