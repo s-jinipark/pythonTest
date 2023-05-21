@@ -1,6 +1,4 @@
 
-# ***** 확인 필요
-
 # 프로그래머스 스타일 로 ...
 def solution(inp):
     answer = 'YES'
@@ -26,6 +24,7 @@ def solution(inp):
         if tmp != 45:
             answer = 'NO'
             break
+    print(answer)
 
     #00-22, 03-25, 06-28
     #30-52, 33-55, 36-58
@@ -40,10 +39,12 @@ def solution(inp):
                 for l in range(j, j+3):
                     #print('>', k, l)
                     tmp2 += inp[k][l]
-                    if tmp2 != 45:
-                        answer = 'NO'
-                        print(k,j)
-                        break
+            #print('tmp2', tmp2)
+            # ** 비교 위치를 잘 잡아야 함
+            if tmp2 != 45:
+                answer = 'NO'
+                #print(k,j)
+                break
     return answer
 
 inp = [
@@ -60,7 +61,7 @@ inp = [
 
 re = solution(inp)
 print('re :', re)
-#=>
+#=> YES
 print('==============================')
 
 inp = [
@@ -77,7 +78,7 @@ inp = [
 
 re = solution(inp)
 print('re :', re)
-#=>
+#=> NO
 print('==============================')
 
 inp = [
@@ -94,5 +95,5 @@ inp = [
 
 re = solution(inp)
 print('re :', re)
-#=>
+#=> YES
 print('==============================')
