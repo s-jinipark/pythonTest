@@ -1,7 +1,18 @@
 
+def check_dup(res) :
+    dic = {}
+    for r in res :
+        if r in dic :
+            return False
+        else:
+            dic[r] = 1
+    return True
+
 def DFS(L, res):
     global cnt
     if L == M :
+        if not check_dup(res):  # 걸러 준다
+            return
         print(res)
         cnt += 1
     else :

@@ -10,7 +10,7 @@ def DFS(L):
                 chk[i] = 1
                 res[L] = i
                 DFS(L+1)
-                chk[i] = 0
+                chk[i] = 0  # 마지막 원 위치(**)
 
 def solution(N, M):
     answer = 0
