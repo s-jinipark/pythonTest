@@ -8,10 +8,10 @@ answer = []
 tmp = {}
 # for w in sample:
 #     w1 = w.lower()
-#     if w1 in tmp:
-#         tmp[w1] += 1
+#     if w1 in 연습:
+#         연습[w1] += 1
 #     else:
-#         tmp[w1] = 1
+#         연습[w1] = 1
 
 # [2번째 연습] 딕셔너리에 넣는 거 , dict 는 {} 라는 점
 for w in sample :
@@ -23,13 +23,13 @@ for w in sample :
 
 print(tmp)
 
-#tmplist = [[c, tmp[c]] for c in tmp]
+#tmplist = [[c, 연습[c]] for c in 연습]
 # 이거슨 리스트의 리스트 군
 # ***** 이부분 중요
 tmplist = [[c, tmp[c]] for c in tmp]
 print(tmplist)
     # 이 것도 되긴하지만 ->
-    # tmplist2 = [(c, tmp[c]) for c in tmp]
+    # tmplist2 = [(c, 연습[c]) for c in 연습]
     # print(tmplist2)
     # 아래에서 문제 발생
     #TypeError: 'tuple' object does not support item assignment
@@ -37,14 +37,14 @@ print(tmplist)
 # for i in range(len(tmplist)):
 #     for j in range(len(tmplist)-1-i):
 #         if tmplist[j][1] < tmplist[j+1][1]:
-#             tmp = tmplist[j]
+#             연습 = tmplist[j]
 #             tmplist[j] = tmplist[j+1]
-#             tmplist[j+1] = tmp
+#             tmplist[j+1] = 연습
 #         elif tmplist[j][1] == tmplist[j+1][1]:
 #             if tmplist[j][0] > tmplist[j+1][0]:
-#                 tmp = tmplist[j]
+#                 연습 = tmplist[j]
 #                 tmplist[j] = tmplist[j + 1]
-#                 tmplist[j + 1] = tmp
+#                 tmplist[j + 1] = 연습
 
 # [2] 2단계 버블 정렬
 # 답은 ['teach', 'change', 'propose', 'make', 'program']

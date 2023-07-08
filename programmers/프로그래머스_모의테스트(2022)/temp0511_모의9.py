@@ -13,17 +13,17 @@ def solution(arr, K):
 
     for l in lst:
 
-        # tmp = max(l)-min(l)
-        # print(l, tmp)
-        # if answer > tmp:
-        #     answer = tmp
+        # 연습 = max(l)-min(l)
+        # print(l, 연습)
+        # if answer > 연습:
+        #     answer = 연습
         # -> 시간 초과 나옴
 
-        # tmp = (list) (l)
-        # #print(tmp)
-        # tmp.sort()
-        # print(tmp, tmp[0], tmp[-1])
-        # diff = tmp[-1] - tmp[0]
+        # 연습 = (list) (l)
+        # #print(연습)
+        # 연습.sort()
+        # print(연습, 연습[0], 연습[-1])
+        # diff = 연습[-1] - 연습[0]
         # if answer > diff:
         #     answer = diff
         # -> (마찬가지) 시간 초과 나옴

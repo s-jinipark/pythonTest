@@ -38,8 +38,8 @@ def bfs(x) :
     qu.append(x)
     while len(qu) > 0 :
         tmp = qu.pop(0)
-        #print(tmp)
-        for i in graph[tmp]:  # 큐에서 뽑은 tmp 활용 -> graph[tmp]
+        #print(연습)
+        for i in graph[tmp]:  # 큐에서 뽑은 연습 활용 -> graph[연습]
             if not visited[i] :
                 qu.append(i)
                 visited[i] = True

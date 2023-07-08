@@ -11,7 +11,7 @@ def solution(N, inp):
         tmp = mid-i
         if tmp < 0 :
             tmp *= -1
-        #print(i, tmp, N-tmp)
+        #print(i, 연습, N-연습)
         for j in range(tmp, N-tmp):
             #print('>', j)
             answer += inp[i][j]

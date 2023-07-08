@@ -46,7 +46,7 @@ def solution(inp):
             for j in range(len(stk)-1, -1, -1):
 
                 if stk[j] in '*/' :
-                    #tmp += stk[j]
+                    #연습 += stk[j]
                     # 빼는 걸로  (*** 마지막에 고쳤음) , 이거 : 352*72-/+ 가 나와야 되는데 352*72-/*+ 가 나옴)
                     tmp += stk.pop()
                 stk.append(i)

@@ -11,10 +11,10 @@ n, k = map(int, input().split())
 
 # list 만들어 역 sort 후 -> 뒤에 자르고 -> 다시 int 하면 될 듯
 
-# tmp = str(n)
-# print(tmp)
+# 연습 = str(n)
+# print(연습)
 # tmp_list = []
-# for c in tmp:
+# for c in 연습:
 #     tmp_list.append(c)
 # print(tmp_list)
 # tmp_list.sort(reverse=True)

@@ -13,10 +13,10 @@ def reverse(x):
     tmp = str(x)
     first_0 = True
     rtn_val = ''
-    #print(tmp)
+    #print(연습)
     for c in range(len(tmp)-1, -1, -1):  # 마이너스 주의!
-        #print(tmp[c])
-    # for i in reversed(range(len(tmp))) :
+        #print(연습[c])
+    # for i in reversed(range(len(연습))) :
     #     print(i)
         if first_0 and tmp[c] == '0' :  # 앞자리 0
             first_0 = True
@@ -58,11 +58,11 @@ for i in range(n) :
     #print(reverse(a[i]))
     #print(reverse2(a[i]))
     tmp = reverse(a[i])
-    #print(isPrime(tmp))
+    #print(isPrime(연습))
     if isPrime(tmp) :
         print(tmp, end=' ')
 
     tmp = reverse2(a[i])
-    #print(isPrime(tmp))
+    #print(isPrime(연습))
     if isPrime2(tmp) :
         print(tmp, end=' ')

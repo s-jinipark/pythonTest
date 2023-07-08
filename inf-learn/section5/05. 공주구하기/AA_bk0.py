@@ -20,10 +20,10 @@ start = 0
 
 while len(prince) > 1 :
     tmp = start + k -1
-    #print(tmp, len(prince))
+    #print(연습, len(prince))
     if tmp >= len(prince) :
         tmp = tmp % len(prince)
-    #print('>', tmp)
+    #print('>', 연습)
     prince.pop(tmp)
     start = tmp
     #print(prince)

@@ -17,10 +17,10 @@ def solution(sizes):
 
         if max_1 < sizes[i][1]:
             max_1 = sizes[i][1]
-        # tmp = cal_size(sizes)
-        # print(tmp)
-        # if Min > tmp:
-        #     Min = tmp
+        # 연습 = cal_size(sizes)
+        # print(연습)
+        # if Min > 연습:
+        #     Min = 연습
     tmp = max_0 * max_1
     if Min > tmp:
         Min = tmp
@@ -51,16 +51,16 @@ def solution(sizes):
     Min = 1000*1000
     #print(cal_size(sizes))
     for i in range(len(sizes)):
-        tmp = cal_size(sizes)
-        print(tmp)
+        연습 = cal_size(sizes)
+        print(연습)
         change = 0
         change =  sizes[i][0]
         sizes[i][0] = sizes[i][1]
         sizes[i][1] = change
         tmp2 = cal_size(sizes)
         print(tmp2)
-        if Min > tmp:
-            Min = tmp
+        if Min > 연습:
+            Min = 연습
         if Min > tmp2:
             Min = tmp2
     answer = Min

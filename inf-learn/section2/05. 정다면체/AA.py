@@ -14,7 +14,7 @@ for n2 in range(1, n+1):
         #print(n2+k2)
         tmp = n2+k2
         if tmp in dic:
-            #print("있음", dic.get(tmp))
+            #print("있음", dic.get(연습))
             dic[tmp] = dic.get(tmp) + 1
         else:
             dic[tmp] = 1

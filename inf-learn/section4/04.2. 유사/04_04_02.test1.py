@@ -32,16 +32,16 @@ def solution(N, inp):
 
     '''
     # 1st 잘 안되서, 구글링
-    # tmp = []
+    # 연습 = []
     # for i in inp:
     #     for j in range(1, N):
     #         #print(i * j)
-    #         tmp.append(i*j)
-    # tmp.sort()
-    # print(tmp)
+    #         연습.append(i*j)
+    # 연습.sort()
+    # print(연습)
     #
-    # start = tmp[0]
-    # end = tmp[-1]
+    # start = 연습[0]
+    # end = 연습[-1]
     #
     # count = 0
     # # 변경 필요

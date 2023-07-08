@@ -15,7 +15,7 @@ M = max(in_list)
 new_sum = 0
 for i in in_list :
     #result[i] = in_list[i]/M *100
-    #tmp = in_list[i]/M *100
+    #연습 = in_list[i]/M *100
     tmp = i/M * 100
     print(tmp)
     new_sum += tmp

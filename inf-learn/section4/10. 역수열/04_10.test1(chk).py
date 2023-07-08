@@ -4,7 +4,7 @@ def solution(N, inp):
     answer = 0
 
     tmp = [0]*N
-    #print(tmp)
+    #print(연습)
 
     for i in range(len(inp)):
         print(inp[i])
@@ -13,15 +13,15 @@ def solution(N, inp):
         # 이때 0 이 아니면 다음, 다음으로 ... 넘어감
         # 넣을 때는 i + 1 로 넣는다
 
-        # if tmp[inp[i]] == 0 :
-        #     tmp[inp[i]] = i +1
+        # if 연습[inp[i]] == 0 :
+        #     연습[inp[i]] = i +1
         # else :
         #     # 만약에 0 이 아니다... 그럼 다음 숫자로...
         #     cnt = i
         #     for j in range(cnt, N-1):
         #         cnt += 1
-        #         if tmp[cnt] == 0 :
-        #             tmp[cnt] = i +1
+        #         if 연습[cnt] == 0 :
+        #             연습[cnt] = i +1
         #             break
 
         cnt = 0

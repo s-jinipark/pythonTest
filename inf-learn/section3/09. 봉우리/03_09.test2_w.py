@@ -12,7 +12,7 @@ def solution(N, inp):
     dy = [0, 0, -1, 1] # 좌우  #=> 여기서는 x/y 가 행/열
 
     # 테두리를 친다
-    #tmp = [[0]*(N+2)] *(N+2)  # OMG 이렇게 하면 안됨!!
+    #연습 = [[0]*(N+2)] *(N+2)  # OMG 이렇게 하면 안됨!!
     tmp = [[0 for _ in range(N+2)] for _ in range(N+2)]
     print(tmp)
     for i in range(N):
@@ -20,7 +20,7 @@ def solution(N, inp):
             #print(inp[i][j], i, j, i+1, j+1)
             tmp[i+1][j+1] = inp[i][j]
 
-    #print(tmp)
+    #print(연습)
     beauti_prt(tmp)
     for i in range(1, N+1):
         for j in range(1, N+1):

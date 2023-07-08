@@ -17,9 +17,9 @@ r_a = [0]*n
 print(r_a)
 
 # for i in range(n) :
-#     tmp = a[i]  # 인덱스 0 -> 1 이란 말
+#     연습 = a[i]  # 인덱스 0 -> 1 이란 말
 #     for j in range(n) :
-#         if j >= tmp and r_a[j] == 0 :
+#         if j >= 연습 and r_a[j] == 0 :
 #             r_a[j] = i+1
 #             break
 #     print(r_a)

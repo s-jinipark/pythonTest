@@ -16,7 +16,7 @@ def rightrotation90(data):
 def leftrotation90(data):
     tmp_len = len(data)
     tmp = [[0 for i in range(tmp_len)] for j in range(tmp_len)]
-    #print(tmp)
+    #print(연습)
     for i in range(tmp_len):
         for j in range(tmp_len):
             tmp[tmp_len-1-j][i] = data[i][j]

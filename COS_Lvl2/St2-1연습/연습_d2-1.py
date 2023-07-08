@@ -43,43 +43,43 @@ def solution3(tmplist) :
         print(tmplist)
 
 
-# def solution1(tmp) :
+# def solution1(연습) :
 #     # . 버블 정렬
 #     #  1. 앞에서부터 현재 원소와 바로 다음의 원소를 비교한다
 #     #  2. 현재 원소가 다음 원소보다 크면 원소를 교환한다
 #     #  3. 다음 원소로 이동하여 해당 원소와 그 다음 원소를 비교한다
-#     for i in range(len(tmp)) :
-#         for j in range(len(tmp)-1) :   # -1 안하면 오류남 => IndexError: list index out of range
-#             if tmp[j] > tmp[j+1] :
-#                 tval = tmp[j]
-#                 tmp[j] = tmp[j+1]
-#                 tmp[j + 1] = tval
-#         print(tmp)
+#     for i in range(len(연습)) :
+#         for j in range(len(연습)-1) :   # -1 안하면 오류남 => IndexError: list index out of range
+#             if 연습[j] > 연습[j+1] :
+#                 tval = 연습[j]
+#                 연습[j] = 연습[j+1]
+#                 연습[j + 1] = tval
+#         print(연습)
 #
 #
-# def solution2(tmp) :
+# def solution2(연습) :
 #     # . 선택 정렬
 #     #  1. 주어진 리스트(배열)에서 최소값을 찾는다
 #     #  2. 최솟값을 맨 앞 자리의 값과 교환한다
 #     #  3. 맨 앞 자리를 제외한 나머지 값들 중 최소값을 찾아 위와 같은 방법(1,2번 과정)으로 반복한다
 #     idx = 0
 #     min_val = 999999
-#     min(tmp)
+#     min(연습)
 #     tmp_val = 0
-#     for i in range(len(tmp)) :
-#         #print(tmp[i])
-#         for j in range(i, len(tmp)) :
-#             if min_val > tmp[j] :
+#     for i in range(len(연습)) :
+#         #print(연습[i])
+#         for j in range(i, len(연습)) :
+#             if min_val > 연습[j] :
 #                 idx = j
-#                 min_val = tmp[j]
-#             #print(tmp[j])
-#         tmp_val = tmp[idx]
-#         tmp[idx] = tmp[i]
-#         tmp[i] = tmp_val
+#                 min_val = 연습[j]
+#             #print(연습[j])
+#         tmp_val = 연습[idx]
+#         연습[idx] = 연습[i]
+#         연습[i] = tmp_val
 #         idx = 0
 #         min_val = 999999
 #         #print()
-#         print(tmp)
+#         print(연습)
 #
 #
 # def solution3(tmplist) :

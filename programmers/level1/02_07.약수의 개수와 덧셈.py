@@ -37,8 +37,8 @@ def solution(left, right):
         #print(i)
         #print(cnt_measure(i))
         # 짝수 : 더하고 , 홀수 : 뺀다
-        tmp = cnt_measure(i)
-        if  tmp%2== 0 : # 짝수
+        연습 = cnt_measure(i)
+        if  연습%2== 0 : # 짝수
             answer += i
         else :
             answer -= i

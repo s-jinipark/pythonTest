@@ -36,7 +36,7 @@ def solution(n, lost, reserve):
                 reserve[j] = -1
                 break
 
-    # 구제한 사람 tmp
+    # 구제한 사람 연습
     answer = n - len(lost) + tmp
     return answer
 

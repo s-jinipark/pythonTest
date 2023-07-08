@@ -5,14 +5,14 @@ def solution(k, score):
 
     for s in score :
         for i in range(k):
-            #print(s, tmp, min(tmp))
+            #print(s, 연습, min(연습))
 
             if s > tmp[i]  and min(tmp) == tmp[i]:   # 작은 값 중에, 최소 값인 곳
                 tmp[i] = s
                 break
-        # print('>', min(tmp))
-        # print(s, tmp, min(tmp))
-        # answer.append(min(tmp))
+        # print('>', min(연습))
+        # print(s, 연습, min(연습))
+        # answer.append(min(연습))
         minVal = 99999
         for j in range(len(tmp)) :
             if minVal > tmp[j] and tmp[j] > -1 :

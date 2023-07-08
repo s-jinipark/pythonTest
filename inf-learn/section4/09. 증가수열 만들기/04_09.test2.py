@@ -34,12 +34,12 @@ def solution(N,  inp):
     # 반대쪽(rt)을 또 선택해야 해서.. 꼬임
     #
     # while lt < rt :
-    #     tmp = 0
+    #     연습 = 0
     #     if inp[lt] > inp[rt]  :
-    #         tmp = inp[rt]
+    #         연습 = inp[rt]
     #         rt -=1
     #     elif inp[lt] < inp[rt]:
-    #         tmp = inp[rt]
+    #         연습 = inp[rt]
 
     return answer
 

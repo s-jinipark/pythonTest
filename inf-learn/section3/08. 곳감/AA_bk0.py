@@ -36,16 +36,16 @@ for i in range(m):
             tmp = no3 + j
             if tmp >= n:
                 tmp = abs(n-tmp)
-            #print(j, '->', tmp)
+            #print(j, '->', 연습)
             tmp_list[tmp] = a[no1 - 1][j]
         else :
             # 왼쪽
             #print(j, j-no3)
             tmp = j - no3
             if tmp <0 :
-                #print(n-abs(tmp))
+                #print(n-abs(연습))
                 tmp = n-abs(tmp)
-            #print(j, '->', tmp)
+            #print(j, '->', 연습)
             tmp_list[tmp] = a[no1-1][j]
             #print( a[no1-1][j])
     print(tmp_list)

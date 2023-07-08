@@ -22,7 +22,7 @@ def solution(inp):
             for k in range(j,j+5):
                 #print('>', k)
                 tmp.append(inp[i][k])
-            #print(tmp)
+            #print(연습)
             if check_hm(tmp):
                 answer += 1
 

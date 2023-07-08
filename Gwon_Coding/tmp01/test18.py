@@ -22,9 +22,9 @@
 # for i in range(len(str)) :
 #     # 결국 a = 0 , z = 25 로 계산
 #     print( ord(str[i] ) - 97 )
-#     tmp = ord(str[i] ) - 97
-#     if result[tmp] == -1 :
-#         result[tmp] = i
+#     연습 = ord(str[i] ) - 97
+#     if result[연습] == -1 :
+#         result[연습] = i
 # print(result)
 #
 # for j in result :
@@ -43,11 +43,11 @@ n = 2
 # print(lst)
 #
 # for l in lst:
-#     tmp = ''
+#     연습 = ''
 #     for j in range(len(l[1])) :
 #         print(l[1][j])
-#         tmp += l[1][j] * int(l[0])
-#     print(tmp)
+#         연습 += l[1][j] * int(l[0])
+#     print(연습)
 
 # for i in range(n):
 #     a, b = input().split()

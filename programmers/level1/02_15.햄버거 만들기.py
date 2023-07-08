@@ -25,19 +25,19 @@ print(re)
 
 def solution(ingredient):
     answer = 0
-    tmp = ''
+    연습 = ''
     for i in ingredient :
-        tmp += str(i)
+        연습 += str(i)
     while True :
-        t_num = tmp.find('1231')
+        t_num = 연습.find('1231')
         if t_num > 0:
-            #print(tmp.find('1231') , tmp[:t_num] , tmp[t_num:t_num+4] , tmp[t_num+4:])
-            tmp = tmp[:t_num] + tmp[t_num+4:]
+            #print(연습.find('1231') , 연습[:t_num] , 연습[t_num:t_num+4] , 연습[t_num+4:])
+            연습 = 연습[:t_num] + 연습[t_num+4:]
             answer += 1
         else :
             break
 
-    #print(tmp)
+    #print(연습)
 
     return answer
     

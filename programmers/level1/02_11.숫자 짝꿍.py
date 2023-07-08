@@ -53,7 +53,7 @@ print(re)
 
 def solution(X, Y):
     answer = ''
-    tmp = []
+    연습 = []
     xlist = list(X)
     ylist = list(Y)
 
@@ -62,17 +62,17 @@ def solution(X, Y):
             if xlist[i] == ylist[j] :
                 #print('>', ylist[j])
                 #ylist.pop(j)  # 오류남
-                tmp.append(ylist[j])
+                연습.append(ylist[j])
                 ylist[j] = '-1'
                 break
-    if len(tmp) == 0 :
+    if len(연습) == 0 :
         return "-1"
     #print(xlist)
-    tmp.sort(reverse=True)
-    #print(tmp)
-    if len(tmp) > 1 and tmp[0] =='0':
+    연습.sort(reverse=True)
+    #print(연습)
+    if len(연습) > 1 and 연습[0] =='0':
         return '0'
-    for t in tmp:
+    for t in 연습:
         answer += t
     return answer
     

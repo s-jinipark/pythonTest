@@ -5,7 +5,7 @@ def digit_sum(x):
     tmp = 0
     for j in range(len(x)):
         tmp += int(x[j])
-    #print('>', tmp)
+    #print('>', 연습)
     return tmp
 
 # 채점 전 주석 처리
@@ -22,13 +22,13 @@ max_val = ''
 max_sum = 0
 # for i in a :
 #     #print(i)
-#     tmp = 0
+#     연습 = 0
 #     for j in range(len(i)):
 #         print(i[j])
-#         tmp += int(i[j])
-#     print(tmp)
-#     if tmp > max_val :
-#         max_val = tmp
+#         연습 += int(i[j])
+#     print(연습)
+#     if 연습 > max_val :
+#         max_val = 연습
 
 # [2]
 for i in a :

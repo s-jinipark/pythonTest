@@ -9,9 +9,9 @@ n, k = map(int, input().split())
 # str 로
 #a = list(map(str, input().split()))
 
-# tmp = str(n)
+# 연습 = str(n)
 # tmp_list = []
-# for c in tmp:
+# for c in 연습:
 #     tmp_list.append(int(c))
 # print(tmp_list)
 # 웁스~ ! 동일한 코드

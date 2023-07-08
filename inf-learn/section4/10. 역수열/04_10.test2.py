@@ -8,11 +8,11 @@ def solution(N, inp):
     for i in range(N):
         for j in range(N):
             if (inp[i]==0 and tmp[j]==0):  # 둘다 0 이면 바로 넣는다
-                #print(inp[i], tmp[j])
+                #print(inp[i], 연습[j])
                 tmp[j] = i+1  # + 1 해야 된다는 점
                 break
             elif tmp[j]==0 :
-                #print(inp[i], tmp[j])
+                #print(inp[i], 연습[j])
                 inp[i] -= 1  # 순서를 표시하는 키 !
                 # 순서를 건너뛰는 효과, 이게 사전 준비 없이 생각 날 수 있나?
                 print('>', inp[i])

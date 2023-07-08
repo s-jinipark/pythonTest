@@ -22,9 +22,9 @@ print(queue)
 '''
 # cnt = 1
 # while (len(queue) > 1) :
-#     tmp = queue.popleft()
+#     연습 = queue.popleft()
 #     if cnt%2 == 0 :  # 짝수
-#         queue.append(tmp)
+#         queue.append(연습)
 #     cnt += 1
 # print(queue)
 

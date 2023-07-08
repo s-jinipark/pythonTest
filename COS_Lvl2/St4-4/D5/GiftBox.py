@@ -14,7 +14,7 @@ def solution(pricetable, budget):
                     tmp -= pricetable[k]
 
                 if tmp == budget :
-                    #print(i, j, k , tmp)
+                    #print(i, j, k , 연습)
                     lst.append((i,j,k))
     print(lst)
     print(set(lst))

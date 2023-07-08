@@ -28,31 +28,31 @@ def solution(inp):
     answer = stk[0]  # 값이 하나만 있을 테니...
 
     ########## second
-    # tmp = inp
-    # while len(tmp) > 0:
+    # 연습 = inp
+    # while len(연습) > 0:
     #     c = 0
     #     front = ''
     #     end = ''
-    #     for i in range(len(tmp)):
+    #     for i in range(len(연습)):
     #         # 연산자가 나오면 앞 두자리 계산하고 끝냄
-    #         if tmp[i] == '+' :
-    #             c = int(tmp[i-2]) + int(tmp[i-1])
-    #         elif tmp[i] == '-' :
-    #             c = int(tmp[i-2]) - int(tmp[i-1])
-    #         elif tmp[i] == '*' :
-    #             c = int(tmp[i-2]) * int(tmp[i-1])
-    #         elif tmp[i] == '/' :
-    #             c = int(tmp[i-2]) / int(tmp[i-1])
+    #         if 연습[i] == '+' :
+    #             c = int(연습[i-2]) + int(연습[i-1])
+    #         elif 연습[i] == '-' :
+    #             c = int(연습[i-2]) - int(연습[i-1])
+    #         elif 연습[i] == '*' :
+    #             c = int(연습[i-2]) * int(연습[i-1])
+    #         elif 연습[i] == '/' :
+    #             c = int(연습[i-2]) / int(연습[i-1])
     #
     #         if c != 0 :  # 값이 들어 왔어.. 그렇다면
-    #             print(i,  tmp[i - 2], tmp[i - 1], tmp[:i - 2], tmp[i+1:])
-    #             front = tmp[:i - 2]
-    #             end = tmp[i+1:]
+    #             print(i,  연습[i - 2], 연습[i - 1], 연습[:i - 2], 연습[i+1:])
+    #             front = 연습[:i - 2]
+    #             end = 연습[i+1:]
     #             break
     #
-    #     tmp = front + str(c) + end
+    #     연습 = front + str(c) + end
     #
-    #     print(tmp)
+    #     print(연습)
 
     ########## first
     # for i in inp):
@@ -62,14 +62,14 @@ def solution(inp):
     #         print(i, inp[:i], inp[i-2], inp[i-1], inp[:i-2])
 
         # if inp[i] == '+' :
-        #     tmp = int(inp[i-2]) + int(inp[i-1])
+        #     연습 = int(inp[i-2]) + int(inp[i-1])
         #
         # elif inp[i] == '-' :
-        #     tmp = int(inp[i-2]) - int(inp[i-1])
+        #     연습 = int(inp[i-2]) - int(inp[i-1])
         # elif inp[i] == '*' :
-        #     tmp = int(inp[i-2]) * int(inp[i-1])
+        #     연습 = int(inp[i-2]) * int(inp[i-1])
         # elif inp[i] == '/' :
-        #     tmp = int(inp[i-2]) / int(inp[i-1])
+        #     연습 = int(inp[i-2]) / int(inp[i-1])
 
     return answer
 

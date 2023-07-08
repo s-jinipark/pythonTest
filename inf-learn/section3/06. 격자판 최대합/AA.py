@@ -17,20 +17,20 @@ n = int(input())  # N 명
 #     #print(a)
 #     two.append(a)
 #     #print(sum(a))
-#     tmp = sum(a)
-#     if max < tmp :
-#         max = tmp
+#     연습 = sum(a)
+#     if max < 연습 :
+#         max = 연습
 
 #한번에 적재
 a = [list(map(int, input().split())) for _ in range(n)]
 
 # #열 계산
 # for i in range(n):
-#     tmp = 0
+#     연습 = 0
 #     for j in range(n):
-#         tmp += two[j][i]
-#     if max < tmp :
-#         max = tmp
+#         연습 += two[j][i]
+#     if max < 연습 :
+#         max = 연습
 
 # 행, 열 따로 계산 했던 것 한번에 계산
 max = -1

@@ -30,14 +30,14 @@ def bfs(n):
     count += 1
 
     while len(qu) > 0  :
-        #tmp = qu.pop(0)
+        #연습 = qu.pop(0)
         tmp = qu.popleft()
-        #visited[tmp] = count
+        #visited[연습] = count
         #count += 1
-        #print(tmp)
+        #print(연습)
         graph[tmp].sort()
         for i in graph[tmp]:
-            #print(graph[tmp])
+            #print(graph[연습])
             if visited[i] == 0 :
                 qu.append(i)
                 visited[i] = count
@@ -57,11 +57,11 @@ for i in range(1, len(visited)):
 #     visited[n] = count  # 처음 들어 왔을 때
 #     while len(qu) > 0 :
 #         count += 1
-#         tmp = qu.pop(0)
-#         visited[tmp] = count
-#         #tmp.sort()
-#         print(tmp)
-#         for i in graph[tmp]:
+#         연습 = qu.pop(0)
+#         visited[연습] = count
+#         #연습.sort()
+#         print(연습)
+#         for i in graph[연습]:
 #             if visited[i] == 0 : # 방문 안 했으면
 #                 qu.append(i)
 # bfs(r)

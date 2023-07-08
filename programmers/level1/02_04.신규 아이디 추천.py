@@ -82,46 +82,46 @@ print(re)
 def solution(new_id):
     answer = ''
     answer = new_id.lower()
-    tmp = ""
+    연습 = ""
     for ch in answer:
         if ch.isalnum() :
-            tmp += ch
+            연습 += ch
         elif ch == "-" or ch == "_" or ch == "." :
-            tmp += ch
+            연습 += ch
 
-    idx = tmp.find("..")
+    idx = 연습.find("..")
     while idx > -1 :
         #print(idx)
-        tmp = tmp.replace("..", ".")
-        idx = tmp.find("..")
-    #print(tmp)
+        연습 = 연습.replace("..", ".")
+        idx = 연습.find("..")
+    #print(연습)
 
-    #print(tmp[0])
-    if len(tmp) >1 and tmp[0] == "."  :
-        tmp = tmp[1:]
-    elif len(tmp) ==1 and tmp[0] == "." :
-        tmp = ""    
-    if len(tmp) >1 and tmp[-1] == "." :
-        tmp = tmp[:-1]
-    elif  len(tmp) ==1 and tmp[-1] == "." :
-        tmp = ""          
-    print(tmp)
-    if tmp == "":
-        tmp = "a"
+    #print(연습[0])
+    if len(연습) >1 and 연습[0] == "."  :
+        연습 = 연습[1:]
+    elif len(연습) ==1 and 연습[0] == "." :
+        연습 = ""    
+    if len(연습) >1 and 연습[-1] == "." :
+        연습 = 연습[:-1]
+    elif  len(연습) ==1 and 연습[-1] == "." :
+        연습 = ""          
+    print(연습)
+    if 연습 == "":
+        연습 = "a"
 
-    #print(len(tmp) )
-    tmp = tmp[:15]
+    #print(len(연습) )
+    연습 = 연습[:15]
 
-    if tmp[-1] == ".":
-        tmp = tmp[:-1]
+    if 연습[-1] == ".":
+        연습 = 연습[:-1]
 
 
-    if len(tmp) <= 2 :
-        last = tmp[-1]
+    if len(연습) <= 2 :
+        last = 연습[-1]
         #print(last)
-        while len(tmp) < 3 :
-            tmp += last
-    #print(tmp)
-    answer = tmp
+        while len(연습) < 3 :
+            연습 += last
+    #print(연습)
+    answer = 연습
     return answer
 '''

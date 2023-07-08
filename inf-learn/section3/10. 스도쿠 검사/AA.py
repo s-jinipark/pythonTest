@@ -19,7 +19,7 @@ ok = True
 for i in range(n):
     #rint(a[i])
     tmp = set(a[i])  # order 가 됨
-    #print(len(tmp))
+    #print(len(연습))
     if len(tmp) != 9 :
         ok = False
         break

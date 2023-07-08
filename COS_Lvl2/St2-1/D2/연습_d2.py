@@ -23,12 +23,12 @@ def solution2(tmp) :
     min(tmp)
     tmp_val = 0
     for i in range(len(tmp)) :
-        #print(tmp[i])
+        #print(연습[i])
         for j in range(i, len(tmp)) :
             if min_val > tmp[j] :
                 idx = j
                 min_val = tmp[j]
-            #print(tmp[j])
+            #print(연습[j])
         tmp_val = tmp[idx]
         tmp[idx] = tmp[i]
         tmp[i] = tmp_val

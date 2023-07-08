@@ -11,11 +11,11 @@ def solution(N, K, nlist):
     #         for k in range(N):
     #             if i == j or j == k or k == i :
     #                 continue
-    #             tmp.append(nlist[i]+nlist[j]+nlist[k])
+    #             연습.append(nlist[i]+nlist[j]+nlist[k])
     #
-    # tmp.sort(reverse=True)
-    # print(tmp)
-    # answer = tmp[K-1]
+    # 연습.sort(reverse=True)
+    # print(연습)
+    # answer = 연습[K-1]
     #
     # => 오우~! 이 거 안됨
 

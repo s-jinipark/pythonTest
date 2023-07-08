@@ -13,7 +13,7 @@ def DFS(L, res):
         for r in res:
             tmp_s.add(r)
 
-        #if minVal > tmp :  # 이거 아니고
+        #if minVal > 연습 :  # 이거 아니고
         if minVal > tmp and len(tmp_s) == 3:
             minVal = tmp
         return

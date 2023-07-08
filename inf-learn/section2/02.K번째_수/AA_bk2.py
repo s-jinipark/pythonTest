@@ -10,6 +10,6 @@ for i in range(t):
     #print(a)
     tmp = a[s-1:e]
     tmp.sort()
-    #print(tmp)
+    #print(연습)
     print("#", i+1, tmp[k-1])
 

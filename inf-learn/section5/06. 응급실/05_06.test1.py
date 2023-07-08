@@ -45,8 +45,8 @@ def solution(N, M, inp):
     # 진료
     # cnt = 0
     # while len(qu) >  0 :
-    #     tmp = qu.popleft()
-    #     pri = tmp[1]
+    #     연습 = qu.popleft()
+    #     pri = 연습[1]
     #     flag = True
     #     for q in qu:
     #         print('>', q)
@@ -58,11 +58,11 @@ def solution(N, M, inp):
     #     # # 진료 여부 결정
     #     if flag :
     #         cnt += 1
-    #         if tmp[0] == M :
+    #         if 연습[0] == M :
     #             print('cnt:', cnt)
     #
     #     else :
-    #         qu.append(tmp)
+    #         qu.append(연습)
     #
     #     print('2:', qu)
     # answer = cnt

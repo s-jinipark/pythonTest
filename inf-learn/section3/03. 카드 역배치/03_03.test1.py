@@ -15,9 +15,9 @@ def solution(inp):
         for j in range(i[0], i[1]+1):
             #print(j)
             tmp.append(cards[j])
-        # print(tmp)
-        # tmp.sort(reverse=True)
-        # print(tmp)
+        # print(연습)
+        # 연습.sort(reverse=True)
+        # print(연습)
         cnt = len(tmp)-1
         for k in range(i[0], i[1]+1):
             cards[k] = tmp[cnt]

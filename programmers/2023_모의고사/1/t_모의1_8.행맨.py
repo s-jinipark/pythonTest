@@ -4,7 +4,7 @@ def solution(word, question):
     # 문제를 읽어 보면 중복된거는 하나로 치는 듯
     tmp = set(word)
     print(tmp)  # 이렇게 넣으면 분리되어 들어감
-                # 단어 통째로 넣으려면 => tmp.add('apple')
+                # 단어 통째로 넣으려면 => 연습.add('apple')
 
     for q in question:
         if q in word :

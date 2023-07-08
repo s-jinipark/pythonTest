@@ -36,13 +36,13 @@ import math
 
 def solution(n):
     answer = 0
-    tmp = n
+    연습 = n
     tmp_3  = ""
-    while tmp > 0 :
-        #print( tmp/3 )
-        #print( tmp%3 )
-        tmp_3 = str(tmp%3) + tmp_3
-        tmp = int(tmp/3)
+    while 연습 > 0 :
+        #print( 연습/3 )
+        #print( 연습%3 )
+        tmp_3 = str(연습%3) + tmp_3
+        연습 = int(연습/3)
     #print(tmp_3)
     #print(tmp_3[::-1])
     tmp_3 = tmp_3[::-1]

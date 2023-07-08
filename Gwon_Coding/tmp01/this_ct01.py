@@ -64,7 +64,7 @@ def factorial(n):
     if n <= 1 :
         return 1
     else :
-        #tmp += n
+        #연습 += n
         return  n * factorial(n-1)
 
 tmp = factorial(5)

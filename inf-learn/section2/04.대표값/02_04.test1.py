@@ -9,7 +9,7 @@ def solution(N, nlist):
         sum += l
     n_avg = round(sum/N)
     print(n_avg)  # 평균(소수 첫째자리 반올림)
-    #print(tmp)
+    #print(연습)
     for j in range(N):
         tmp[j] = abs( nlist[j]-n_avg)
 

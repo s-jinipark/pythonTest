@@ -13,7 +13,7 @@
 n = 5
 tmp = [[0 for i in range(n)] for j in range(n)]
 tmp[2][2] = 1
-#print(tmp)
+#print(연습)
 
 
 

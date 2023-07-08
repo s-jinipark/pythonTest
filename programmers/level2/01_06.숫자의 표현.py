@@ -2,10 +2,10 @@ def solution(n):
     answer = 0
 
     # for i in range(1, n+1): # n 까지 돌려면 n+1
-    #     tmp = 0
+    #     연습 = 0
     #     for j in range(i, n+1):
-    #         tmp += j
-    #         if tmp == n :
+    #         연습 += j
+    #         if 연습 == n :
     #             answer +=1
     #             break
     # 효율성에서 걸려서 -> i 가 1/2 을 넘어서면 연속해서 더할 경우 n 을 당연히 넘는다
