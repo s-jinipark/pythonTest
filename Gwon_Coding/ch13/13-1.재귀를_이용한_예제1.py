@@ -27,7 +27,7 @@ sum2 = fact(N)
 print(sum2)
 
 # --------------------
-# 연습
+# 연습_tmp
 
 def fac(n):
     if n == 1 :

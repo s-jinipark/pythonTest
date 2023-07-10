@@ -30,7 +30,7 @@ hanoi(3, 1,2,3)
 
 '''
 # 다른 풀이 (https://soohyun6879.tistory.com/190)
-print('##### 연습 ')
+print('##### 연습_tmp ')
 num = 4
 
 def hanoi2(n, p_from, p_to, p_mid) :

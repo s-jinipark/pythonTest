@@ -11,7 +11,7 @@ graph = [
     [2, 6, 7]   # 8
 ]
 
-# 재차 연습 -->
+# 재차 연습_tmp -->
 visited = [False] *9
 
 def dfs(v) :

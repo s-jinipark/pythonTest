@@ -1,7 +1,7 @@
 # 다음과 같이 import를 사용할 수 있습니다.
 # import math
 
-##### 재차 연습
+##### 재차 연습_tmp
 
 def solution(arr, K):
     # 여기에 코드를 작성해주세요.

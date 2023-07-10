@@ -13,7 +13,7 @@ tmp = {}
 #     else:
 #         연습[w1] = 1
 
-# [2번째 연습] 딕셔너리에 넣는 거 , dict 는 {} 라는 점
+# [2번째 연습_tmp] 딕셔너리에 넣는 거 , dict 는 {} 라는 점
 for w in sample :
     w1 = w.lower()
     if w1  in tmp :
