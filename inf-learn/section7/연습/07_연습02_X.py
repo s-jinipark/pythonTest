@@ -17,7 +17,8 @@ def solution():
     N가닥으로 뻗는.. 그럼 ? 종료조건은 ?
     
     '''
-    DFS(0, 0, 0)
+    #DFS(0, 0, 0)
+    # -> 오류 나서
     print('>', top_point)
     return answer
 
@@ -30,7 +31,7 @@ inp = [
     (3,20),
     (2,30),
     (2,20),
-    (2,10)
+    (1,10)
 ]
 
 rtn = ''
@@ -40,3 +41,29 @@ print(re)
 #=>
 print('====================')
 
+'''
+풀이 듣고 다시 풀어 봄
+'''
+def DFS2(L, sum):
+    global  top_point2
+    if L == N+1 :
+        print(sum)
+        if top_point2 < sum:
+            top_point2 = sum
+    else:
+        # 선택 하느냐, 안 하느냐
+        if L+inp[L][0] <= N+1:  # if 가 있다는게 기존과 조금 다름
+            DFS2(L+inp[L][0], sum+inp[L][1])
+        DFS2(L+1, sum)  # L+1 로 다음 거..
+
+def solution2():
+    answer = 0
+    inp.insert(0,(0,0))  # 0 을 앞에 넣어 줌
+    print(inp)
+
+    DFS2(1, 0)  # L, sum
+    print('top_point2', top_point2)
+    return answer
+
+top_point2 = 0
+re2 = solution2()
