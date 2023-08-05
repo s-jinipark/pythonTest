@@ -1,0 +1,485 @@
+
+=============================================
+MSA 비법전수!
+
+1강
+MSA 접근 전략
+  Big Bang 급격한 변화
+  Strangler 점진적 변화 (최근)
+
+[조회]
+교살자 패턴, 스트랭글러 패턴 (strangler pattern)
+레거시 시스템을 점진적으로 교체하여 레거시 시스템을 단계적으로 페이드아웃한다
+
+[m]-->
+목표설정     >		서비스 분리  >  	서비스 평가/검증
+MSA 목표 설정 		이벤트 스토밍		후보서비스 평가
+조직 구성			후보서비스 식별		응용프로그램 역공학
+도입 대상 식별		서비스 관계 정의	서비스 시뮬레이션
+				서비스 정의
+<--[m]
+
+엣지있게 쪼개기
+  이벤트 스토밍
+    우선순위 도출
+	스토리텔링으로 Common Understanding
+	[포스트잇]
+
+  후보서비스 식별
+    Bounded Context 식별
+
+  서비스간 관계 정의
+    도식화하고 정의
+	분리의 재검증 작업을 진행
+	UI, API, Pub/Sub, 통신 방식 등 정의
+
+  서비스 정의
+    상세 정의
+	Data/UI/APIs
+	Publisher/Subscriber
+	Stories/Risk
+
+
+MSA 개발도구
+  DevOn reverse
+
+    LG CNS Service Workshop Board
+	  ㆍ Web 기반 Event Storming 워크샵 협업 환경
+
+	DevOn Simulater
+	  ㆍ 비주얼한 서비스 분리 코스트 시뮬레이션
+
+...
+
+
+MSA Service 도출을 위한 핵심 비법
+
+V 현업 Key Person 이 적극적 참여와 MSA 전문가의 경험과 리더십이 중요
+
+ V 이해관계자의 Workshop 을 통한 MSA목표, 수준 합의점 찾기
+
+  V 서비스, 이벤트 중심으로 정의하고 Happy Case 위주로 스토리텔링
+
+   V 서비스 도출 기준에 기반한 상호검증을 통한 통합/분리 재 정련하기
+
+ V MSA 에 대한 기술적 이해 수준 상향 평준화하기
+
+
+[퀴즈]
+서비스를 도출 및 정의하는 방식론은 무엇인가?
+ Event Storming 을 통한 서비스 도출
+ FDD 를  통한 서비스 도출
+ DDD 를 통한 서비스 도출
+ (모두 맞음 - 이런)
+
+도출하는 핵심 비법이 아닌 것은
+ 서비스, 이벤트 중심으로 스토리텔링 하기
+ 이해 관계자의 Workshop 을 통한 MSA 목표, 수준 합의 점 찾기
+ 현업 Key Person 의 적극적 참여
+ 서비스 정의를 통해 한번 정의된 서비스는 통합하거나 분리하지 말아야 한다(V)
+
+MSA 설계시 핵심 비법
+ 서비스의 독립성을 확보하기 위해 비동기식 Event 방식으로 서비스간 연동하기(V)
+ Consumer 입장에서 MicroService 간 필요한 데이터의 복제는 허용하기(V)
+ MicroService 간의 동기적으로 설계하기
+ 여러 MicroService 에 걸린 분산 트랜잭션은 Saga 패턴으로 활용하기
+
+ [어 4 번 아님???]
+
+=============================================
+그 해 우리는, 비 동기~~
+
+API First Design
+  은 동기,비동기 설계를 모두 포함
+
+MicrooService 도출/정의
+  [그림 캡처 필요]
+[m]-->
+목표설정     >		서비스 분리  >  	서비스 평가/검증
+MSA 목표 설정 		이벤트 스토밍		후보서비스 평가
+조직 구성			후보서비스 식별		응용프로그램 역공학
+도입 대상 식별		서비스 관계 정의	서비스 시뮬레이션
+				서비스 정의
+<--[m]
+
+EDA(Event Driven Architecture) 이벤트 기반 아키텍처
+  분산된 시스템 간에 이벤트를 생성, 발행하고 이를 수신한자가 처리하는 시스템 아키텍처
+
+비동기 메시징으로 가용성 개선  [가용성 개선임.]
+
+
+애그리거트(Aggregate)
+  한 단위로 취급 가능한 경계 내부의 도메인 객체망(?)이며 관련있는 도메인 객체를 개념적으로 하나로 묶은 것
+
+
+도메인 이벤트 식별
+  요즘은 Event Storming 을 통해 복잡한 도메인을 이해하기 위해 이벤트 중심으로 워크숍을 진행함
+
+
+도메인 이벤트 발행
+  도메인 이벤트는 애그리거트(Aggregate)가 발행을 담당함
+	1) CDC : 변경데이터추출(Change Data Capture)
+	2) DML : 데이터조작어(Data Manipulation Language
+
+메시지 기반의 비동기 통신
+
+  Event		서비스는 도메인 객체의 변경사실을 알리는 도메인			1:N 관계
+  Pub/Sub  	이벤트를 발행하고, 타 서비스는 관심있는 이벤트를 구독		Choreography Saga 패턴
+
+  Command	요청하는 서비스와 응답하는 서비스가 짝을 이루고,			1:1
+  -Reply	응답을 기다리지 않고 비동기로 처리함					OrchestrationSaga패턴
+
+  Message	단순 메시지를 주고 받기 위한 발행/구독 용도			단방향이므로 서비스의 응답을
+            Provider 가 메시지를 보내면, 					반환하지 않음
+			Consumer 는 이 메시지를 구독해서 처리하는 구조
+
+[퀴즈] (여기서 나올지 모르겠으나...)
+MSA 에서 비동기 메시징을 통해 개선하려고 하는 것은?
+ 배포용이성
+ 확장성
+ 데이터 일관성[나]
+ 가용성(V)
+ [난 데이터 일관성이라 했는데.. 헐][문제 나오겠다...]
+
+도메인 이벤트 발행을 담당하는 것은?
+ 애그리거트(V)[나]
+ 서비스
+ 구독자
+ 화면
+
+1:n 관계의 비동기 처리에 사용하며, Choreography Saga 패턴 적용 시
+사용하는 메시지 유형은 ?
+ Message
+ Event Pub/Sub (V)[나]
+ Command-Reply
+ ESB
+
+
+=============================================
+쉿! Kafka의 비밀
+
+kafka 란?
+ > 이벤트 스트림을 안전하게 전송 (Pub & Sub)
+ > 이벤트 스트림을 디스크에 저장 (Write to Disk)
+ > 이벤트 스트림을 분석 및 처리 (Processing & Analysis)
+
+  Kafka 는 이벤트 스트리밍 플랫폼 !
+
+ v Event 는 비지니스에서 일어나는 모든 일(데이터)를 의미
+   이벤트 스트림은 연속적인 많은 이벤트들의 흐름을 의미
+
+주요 요소
+ Topic : kafka 안에서 메시지가 저장되는 장소
+         논리적인 표현
+
+ Producer : 메시지를 생산(Produce) 해서 kafka 의 Topic 으로 메시지를 보내는 애플리케이션
+
+ Consumer : Topic 의 메시지를 가져와 소비(Consume) 하는 애플리케이션
+
+ v Consumer Group: Topic의 메시지를 사용하기 위해 협력하는 Consumer들의 집합
+   하나의 Consumer는 하나의 Consumer Group에 포함되며, Consumer Group내의 Consumer들은
+   협력하여 Topic의 메시지를 분산병렬처리함
+
+-----
+
+ Commit Log
+  추가만 가능하고 변경 불가능한 데이터 스트럭처
+  데이터(Event)는 항상 로그 끝에 추가되고 변경되지 않음
+
+ Offset
+  Commit Log 에서 Event 의 위치
+  [m>인덱스라고 보면 될거 같은데]
+
+
+Consumer Lag
+[그림 봐야 할 듯]
+
+  Current-Offset  과 LOG-END-OFFSET 의 차이
+
+[m] -> 두 개가 헷갈림
+
+-----
+
+Topic
+  메시지가 저장되는 장소
+  논리적인 표현
+
+Partition
+  Commit Log, 하나의 topic 은 하나 이상의 partition 으로 구성
+  병렬처리를 위해 다수의 partition 사용
+
+Segment
+  메시지(데이터) 가 저장되는 실제 물리 file
+  segment file 이 지정된 크기보다 크거나 지정된 기간보다 오래되면 새파일이 열리고
+  메시지는 새파일에 추가됨
+
+-----
+
+Broker
+  Partition 에 대한 Read 및 Write 를 관리하는 소프트웨어
+  Kafka Server 라고 부르기도 함
+  topic 내 Partition 들을 분산, 유지 및 관리
+  최소 3대 이상의 Broker를 하나의 Cluster 로 구성해야 함
+   -> 4대 이상을 권장
+  모든 Kafka Broker 는 Bootstrap(부트스트랩)서버라고 불림
+  하나의 Broker 에만 연결하면 Cluster 전체에 연결됨
+  각각의 Broker는 모든 Broker, Topic, Partition 에 대해 알고 있음 (Metadata)
+
+Zookeeper
+  Broker 를 관리
+  Zookeeper 는 변경사항에 대해 Kafka 에게 알림
+  Zookeeper 없이는 Kafka 가 작동할 수 없음
+   -> 2022 에 zookeeper 제거한 버전 출시 예정 [??]
+  홀수 서버로 작동하게 설계되어 있음(최소3, 권장5)
+  zookeeper 에는 Leader(writes) 가 있고 나머지 서버는 Follwer(reads) 이다
+
+
+Replication(복제)
+  장애를 대비하기 위한 기술
+   Partition 을 복제(Replication) 하여 다른 Broker 상에서
+   복제물(Replicas)을 만들어서 장애를 미리 대비함
+
+
+In-Sync Replicas(ISR)
+  Leader 장애시 Leader 를 선출하는데 사용
+
+  replicalag.max.messages
+  replicalag.time.mex.ms  이런 옵션 들....
+
+  replica.lag.max.messages의 경우 메시지 유입량이 갑자기 늘어날 경우 OSR로 판단할 소지가 있음
+  replica.lag.time.max.ms 로판단해야함(Follwer가 Leader로 Fetch요청을 시간내에 요청하면 정상으로 판단)
+
+
+[퀴즈] (여기서 나올지 모르겠으나...)
+kafka 안에서 메시지가 저장되는 장소 논리적인 표현을 뜻하는 용어는
+ Topic
+
+LOG-END-OFFSET 과 CURRENT-OFFSET 의 차이를 의미하는 것은
+ Commit Log [나]
+ Consumer Lag [V]
+ Segment
+ Broker
+
+Commit Log 애서 Event 이 위치를 뜻하는 용어는
+ Offset
+
+Broker 는 Kafka Server 라고 부르기도 한다
+ O
+
+=============================================
+Next Level! MSA의 세계관을 소개합니다
+
+기간계/계정계에서 MSA 를 어떻게 적용해야 하는가?
+
+Digital Enterprise 아키텍처 요건
+  신속한 비지니스 대응을 위해 민첩성과 신뢰성을 갖춘 디지털 차세대 아키텍처로
+  고객 서비스 향상 및 운영 효율성을 제고함
+
+
+디지털 차세대 2-Core 아키텍처(DCA)
+구분		Enterprise Core		Digital Business Core
+목표		신뢰성(Reliability)	민첩성(Agility)
+가치		효율성, 안정성			고객 경험, 빠른 대응
+접근방향	IT-centric			Business-centric
+적용대상	핵심업무(back-office)	고객 접점 업무(front-office)
+주기		장기(months)			단기(days, weeks)
+거버넌스	계획 중시, 승인 기반		실증적, 지속적 반복
+클라우드	On-Premise, 		Public/Private Cloud
+		Private Cloud
+서비스	Coarse-grained 		Fine-grained
+크기		Service				Service
+
+[퀴즈]
+DE 란?
+ Digital Enterprise (V)
+ Digital Energy
+ Digital Echo
+ Differential Enterprise
+
+Digital  Core 의 핵심은?
+ 1-Core Architecture
+ 2-Core Architecture (V)
+ 3-Core Architecture
+ 4-Core Architecture
+
+Digital Business Core 는 Agility 를 목표로 한다
+True
+
+고객 데이터 플랫폼의 약어?
+ CDP (V)
+ CI/CDP
+ DMP
+ MSA
+
+
+=============================================
+벚꽃 향기 풍기는 Spring Booot
+
+
+[퀴즈]
+
+Spring Boot Main Application 에 기본적으로 설정되는 Annotation 은
+ @SpringBootApplication (V)
+ @Configuration
+ @EnableAutoConfiguration
+ @Component
+
+SpringBoot 장점 중 관련이 없는 것은
+ Auto Configuration
+ Starter 의 개념
+ Embeded Server
+ web.xml 설정 (V)
+
+spring-boot-starter-web 에 기본적으로 포함되지 않은 Dependency 는 ?
+
+ spring-core
+ spring-aop
+ tomcat-embed-jasper (V)
+ jackson-databind [나]
+
+[-> 헷갈림]
+
+배치를 spring boot 를 적용하여 개발할 때 Main Application 실행 시 모든 job 이 수행되지
+않도록 하는 설정이 아닌것...
+[하.. 문제도 어렵다]
+
+ application.yaml 에 spring.batch.job.enable 을 false 로 설정한다.
+ application.yaml 에 spring.batch.job.names=%{job.name:SampleJob} [나]
+ application.yaml 에 spring.batch.job.names=%{job.name:NONE}
+ @EnableBatchProcessing 사용 (V)
+
+[-> 웁스]
+
+spring-boot-starter-jdbc Dependency 를 추가한 후 application.yaml 에 관련 설정이 없는 경우
+Main Application 이 정상적으로 수행된다
+ False
+
+=============================================
+
+Saga 너의 "찐" 을 보여줘!
+
+
+SAGA Pattern
+  모놀리식 아키텍처로 구현된 어플리케이션은 스프링 프레임워크 기반으로 만들어졌다면
+  @Transactional 만으로도 ACID 가 자동으로 걸려 데이터의 일관성을 보장할 수 있었다
+
+  마이크로서비스 아키텍처로 구성된 어플리케이션은 여러 서비스에 걸쳐서 트랜잭션 처리가 필요하고
+  여러 서비스 간의 데이터 일관성을 유지할 필요가 있다
+
+  이런 분산 트랜잭션 처리를 위해 전통적인 방법으로 2pc 같은 기법을 사용하는데 이런 방법은
+  하나의 서비스가 장애가 있는 경우나 각각 서비스에 동시에 Rocking 을 걸게 되면 발생하는
+  퍼포먼스의 문제나 각각의 서비스가 다른 Instance 에 있기 때문에 통제하기 어렵다
+
+  그래서 나타난 패턴이 SAGA Pattern
+  SAGA 패턴은 각 서비스의 로컬 트랜잭션을 순차적으로 처리하는 패턴
+  각 로컬 트랜잭션은 데이터베이스를 업데이트한 다음에 Saga 내에 있는 다음 로컬 트랜잭션을
+  트리거하는 메시지 또는 이벤트를 게시하는 방법
+
+  다른 트랜잭션의 결과에 따라 롤백 등 실패처리가 필요한 경우 나오는 개념이 보상 트랜잭션.
+  보상 트랜잭션은 어떤 서비스에서 트랜잭션 처리가 실패할 경우, 그 서비스의 앞선 다른 서비스에서
+  처리된 트랜잭션을 되돌리게 하는 트랜잭션
+(*)
+  SAGA 는 일관성 유지가 필요한 트랜잭션을 모두 묶어 하나의 트랜잭션으로 처리하지 않고
+  각각의 로컬 트랜잭션으로 분리하여 순차적으로 처리
+
+  트랜잭션이 실패한 경우 이전 로컬 트랜잭션이 작성한 변경 사항을 취소하는
+  일련의 보상 트랜잭션을 통해 전체의 일관성을 유지
+
+----------
+
+SAGA Choreography   					SAGA Orchestration
+
+ㆍ각각의 로컬 트랜잭션이 다른 MicroService를 	ㆍ분산 트랜잭션을 관리하는 Orchestrator 가
+이벤트로 소싱하는  방식						존재하여 중앙에서 여러 트랜잭션을 관리하는 형태
+
+ㆍ구현이 쉽고 간단							ㆍ분산 트랜잭션을 한눈에 관리
+ㆍ도메인간 종속성이 낮아짐						ㆍ순서가 있는 트랜잭션 구현 가능
+										ㆍ보상 트랜잭션을 쉽게 관리
+
+ㆍ어떤 서비스가 어떤 이벤트를 수신하는지			ㆍ중앙집중적 형태이므로 도메인 커플링이 높아짐
+추측하기 어려움
+ㆍ트랜잭션이 많은 서비스의 경우					ㆍ모든 트랜잭션을 Orchestrator 가
+문제상황 발생시 거래 추적이 어려움				관리하기 때문에 로직이 복잡해짐
+
+
+eventuate
+ 분산 아키텍처에서 분산 데이터 관리 문제를 해결하기 위해 만들어진 오픈소스 기반 플랫폼
+
+ MSA 의 분산 데이터 관리 문제에 대한 문제를 해결함으로써 개발자가 비즈니스 로직에 집중할 수 있도록 한다
+   - Eventuate Local - 이벤트 소싱 기반 프레임워크
+   - Eventuate Tram - 전통적인 JPA/JDBC, Entity Framework 와 같은 Persistence 를 사용하는 서비스를 위한 프레임워크
+     비지니스 로직 재구성 없이 Spring Framework 에 쉽게 적응 가능
+	    eventuate-tram-core
+		eventuate-tram-sagas
+
+Eventuate 구조
+  1) 비지니스 영역에서 로컬 트랜잭션을 처리하고 이에 대한 이벤트 발생정보를 동일 트랜잭션 구간에서 outbox 테이블에 insert
+  2) 별도의 CDC(Change data Capture) 모듈이 신규 insert 건을 감지(polling) 한다
+  3) 감지된 정보를 기반으로 실제 kafka 에 메시지를 발생한다
+
+
+Eventuate 를 통한 Saga Orchestration 구현
+  <SagaDefinition>
+    . step() : 기본 단위이며 Saga 트랜잭션의 스텝 정의한다.
+	           각 스텝에 처리/보상 메소드를 등록합니다.
+	. invokeLocal() : local 에서 수행될 처리 메소드를 등록한다
+	. withcompensation() : 보상 트랜잭션 처리 메소드를 등록한다
+	. invokeParticipant  : 참가자(외부 서비스용) 트랜잭션 메소드를 등록한다
+	. onReply() : 참가자의 응답에 따른 로직처리가 필요한 경우 사용한다
+
+  <invokeParticipant>
+    . 참여자에게 트랜잭션 요청 전달은 Command 토픽을 통해 전달
+	. 참여자에게 Command 토픽을 발행한 후 Outbox 테이블 중
+	  saga_instance 테이블에 saga_type, saga_id, saga_data 등을 저장 후 트랜잭션이 종료
+	. Reply 토픽이 오면 saga_instance 테이블에서 해당 saga_id 에 해당하는 데이터를 읽어서
+	  트랜잭션 재시작
+	. invokeParticipant 수행시 트랜잭션이 종료되므로 화면 응답처리 및
+	  로컬트랜잭션 데이터에 대한 데이터 비격리대책 필요함
+
+비격리 대책
+  데이터 일관성이 깨질 수 있어 이를 위한 대책 고려해야
+    상태 모델링
+
+	시맨틱 lock
+
+<사례>
+트랜잭션 종류
+  보상 가능 트랜잭션 : 보상 트랜잭션으로 롤백 가능한 트랜잭션
+  피봇 트랜잭션 : 사가의 진행/중단 지점. 피봇트랜잭션이 커밋되면 사가는 완료될때까지 실행
+  재시도 가능 트랜잭션 : 피봇트랜잭션 직후의 트랜잭션. 반드시 성공을 보장
+
+
+SAGA 패턴 종류 2가지 고르시오
+
+  SAGA Choreography  (v)
+  SAGA withcompensation
+  SAGA Eventuate
+  SAGA Orchestration (v)
+
+
+SAGA Orchestration 설계에서 트랜잭션 종류가 아닌 것은?
+  보상가능트랜잭션
+  글로벌트랜잭션 (v)
+  피봇트랜잭션
+  재시도가능트랜잭션
+
+비격리대책중 보상 가능 트랜잭션이 생성/수정하는 레코드에
+무조건 플래그를 세팅하는 대책은?
+  비선점잠금
+  교환적 업데이트
+  시맨틱 락 (v)
+  버전 파일
+
+SagaDefinition 중 보상 트랜잭션을 정의하는 함수는?
+ invokeLocal()
+ invokeParticipant()
+ withcompensation() (v)
+ onReply()
+
+=============================================
+
+IaaS
+(Infrastructure as a Service)
+
+
+
