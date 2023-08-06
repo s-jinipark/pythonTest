@@ -1,8 +1,10 @@
+
 def solution(seats):
     answer = 0
     dx = [-1, 0, 1, 0]
     dy = [0, 1, 0, -1]
     n = len(seats)
+    print('n: ', n)
     visited = [[0] * 50 for _ in range(50)]
 
     for i in range(n):
@@ -21,7 +23,8 @@ def solution(seats):
                         ny = cur[1] + dy[k]
                         if nx < 0 or nx >= n or ny < 0 or ny >= n:
                             continue
-                        if visited[nx][ny] == 1 or seats[nx][ny] == 1:
+                        #if visited[nx][ny] == 1 or seats[nx][ny] == 1:
+                        if visited[nx][ny] == 1 or seats[nx][ny] == 0:
                             continue
                         visited[nx][ny] = 1
                         q.append((nx, ny))
@@ -29,8 +32,7 @@ def solution(seats):
     return answer
 
 
-seats = [[1,1,0],[1,0,0],[0,0,1]]
+seats = [[1, 1, 0], [1, 0, 0], [0, 0, 1]]
 
-ans= solution(seats)
-
-print('ans:', ans)
+an = solution(seats)
+print(an)

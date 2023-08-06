@@ -3,29 +3,29 @@ class Shape:
     def calArea(self):
         pass
 
-class Square( Shape):
+class Square( Shape):   # <- 빈칸
     def __init__(self, sideLength):
         self.sideLength = sideLength
 
     def calArea(self):
-        return self.sideLength * self.sideLength
+        return self.sideLength * self.sideLength   # <- 빈칸
 
 
-class Rectangle(Shape):
+class Rectangle(Shape):   # <- 빈칸
     def __init__(self, widthLength, heightLength):
         self.widthLength = widthLength
         self.heightLength = heightLength
 
     def calArea(self):
-        return self.widthLength * self.heightLength
+        return self.widthLength * self.heightLength   # <- 빈칸
 
 
-class Circle(Shape ):
+class Circle(Shape ):   # <- 빈칸
     def __init__(self, radiusLength):
         self.radiusLength = radiusLength
 
     def calArea(self):
-        return int(self.radiusLength * radiusLength * 3)
+        return self.radiusLength * self.radiusLength * 3  # <- 빈칸
 
 
 def solution(drawing):
@@ -43,13 +43,15 @@ def solution(drawing):
 
     print(shape)
 
-    # for i in range(len(drawing)):
-    #     answer += int(shape[i])
+    for i in range(len(drawing)):
+        answer += shape[i].calArea()   # <- 빈칸
 
-    # 파이썬도 Object -> int 변환이 잇음??
+    # [오류] TypeError: unsupported operand type(s) for +=: 'int' and 'Circle'
+    # calArea() 호출하는 것을 까먹음
 
     return answer
 
 drawing = [[2,5],[0,3],[1,4,6]]
 
-solution(drawing)
+ans = solution(drawing)
+print('ans: ' , ans)

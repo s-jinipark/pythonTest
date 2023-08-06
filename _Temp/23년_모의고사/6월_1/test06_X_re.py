@@ -6,9 +6,10 @@ def solution(expense, participants):
     right = expense
     while left <= right:
         mid = (left + right) // 2
+        mid = mid // 100 * 100
         print(mid)
-        mid = mid // 100 * participants
-        if mid >= expense:
+        #if mid >= expense:
+        if mid * participants >= expense:  # if mid >= expense
             answer = mid
             right = mid - 100
         else:
