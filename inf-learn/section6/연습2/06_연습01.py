@@ -7,9 +7,9 @@ def DFS(x):
     if x == 0:
         return
     global rtn
-    rtn = str(x%2) + rtn
-    print(x//2, x%2)
-    x = x//2
+    rtn = str(x % 2) + rtn
+    print(x//2, x % 2)
+    x = x//2   # 11 -> 5 -> 2 -> 1
     DFS(x)
 
 def solution():
