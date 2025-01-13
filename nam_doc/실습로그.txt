@@ -1,0 +1,429 @@
+Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> #리스트
+>>> a = []
+>>> #타입은?
+>>> type(a)
+<class 'list'>
+>>> 
+>>> a
+[]
+>>> a = [1,2,3,4,5,6]
+>>> a
+[1, 2, 3, 4, 5, 6]
+>>> #숫자만 들어가는 것은 아님
+>>> a = ["글자", 123, 123.0]
+>>> 
+>>> a
+['글자', 123, 123.0]
+>>> 
+>>> a = [[123,456], [1], [[123]]]
+>>> 
+>>> a
+[[123, 456], [1], [[123]]]
+>>> a
+[[123, 456], [1], [[123]]]
+>>> #문자열 같이 인덱싱, 슬라이싱 가능
+>>> a = [1,2,3,4,5,6]
+>>> a[0]
+1
+>>> a[-1]
+6
+>>> a[0:1]
+[1]
+>>> #슬라이싱->리스트 형태다
+>>> a = [1,2,3,4,[123,456]]
+>>> a[-1]
+[123, 456]
+>>> a[-1:]
+[[123, 456]]
+>>> 
+>>> b = a[-1:]
+>>> b
+[[123, 456]]
+>>> b[0]
+[123, 456]
+>>> b[0][0]
+123
+>>> b[0][1]
+456
+>>> 
+>>> 
+>>> #리스트에 추가
+>>> a = [1,2,3]
+>>> a.append(4)
+>>> a
+[1, 2, 3, 4]
+>>> a.insert(0,0)
+>>> 
+>>> a
+[0, 1, 2, 3, 4]
+>>> 
+>>> a.insert(9,10)
+>>> 
+>>> a
+[0, 1, 2, 3, 4, 10]
+>>> 
+>>> del a[0]
+>>> 
+>>> a
+[1, 2, 3, 4, 10]
+>>> 
+>>> del a[0:2]
+>>> 
+>>> a
+[3, 4, 10]
+>>> 
+>>> a.remove(4)
+>>> 
+>>> a
+[3, 10]
+>>> 
+>>> 
+>>> a.pop(3)
+Traceback (most recent call last):
+  File "<pyshell#59>", line 1, in <module>
+    a.pop(3)
+IndexError: pop index out of range
+>>> a.pop(0)
+3
+>>> a
+[10]
+>>> 
+>>> #리스트 함수
+>>> # append() 리스트 추가
+>>> # insert() 리스트 삽입
+>>> # del 인덱스 -> 삭제
+>>> # remove(요소) -> 삭제
+>>> # pop(인덱스) -> 삭제 및 값 리턴
+>>> # extend() -> 리스트 확장
+>>> 
+>>> a = [1,2,3]
+>>> b = [4,5,6]
+>>> a + b
+[1, 2, 3, 4, 5, 6]
+>>> 
+>>> a.extend(b)
+>>> a
+[1, 2, 3, 4, 5, 6]
+>>> 
+>>> 
+>>> 
+>>> a = [1,2,3]
+>>> b = [4,5,6]
+>>> a.append(b)
+>>> a
+[1, 2, 3, [4, 5, 6]]
+>>> #-> 리스트가 들어감
+>>> 
+>>> #sort
+>>> a = [4,5,6,3,2,1]
+>>> a.sort()
+>>> a
+[1, 2, 3, 4, 5, 6]
+>>> 
+>>> a.reverse()
+SyntaxError: invalid syntax
+>>> a.reverse()
+>>> 
+>>> a
+[6, 5, 4, 3, 2, 1]
+>>> 
+>>> 1 in a
+True
+>>> #-> 안에 있는지 확인
+>>> 10 in a
+False
+>>> 
+>>> dir(list)
+['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+>>> 
+>>> #튜플
+>>> #-> 괄호로 표현
+>>> a = ()
+>>> type(a)
+<class 'tuple'>
+>>> 
+>>> a
+()
+>>> a = [1,2,3,4,5,]
+>>> b = (1,2,3,4,5)
+>>> type(a), type(b)
+(<class 'list'>, <class 'tuple'>)
+>>> 
+>>> a[0] = 9
+>>> a
+[9, 2, 3, 4, 5]
+>>> b[0] = 9
+Traceback (most recent call last):
+  File "<pyshell#114>", line 1, in <module>
+    b[0] = 9
+TypeError: 'tuple' object does not support item assignment
+>>> #삭제, 변경 안됨 -> 사용만
+>>> 
+>>> b = 1,2,3,4,5
+>>> b
+(1, 2, 3, 4, 5)
+>>> 
+>>> b = 1
+>>> b
+1
+>>> b = 1,
+>>> b
+(1,)
+>>> type(b)
+<class 'tuple'>
+>>> # 패킹 : 튜플로 만드는 작업
+>>> # 언패킹 : 튜플에서 값을 꺼내는 작업
+>>> 
+>>> a = 100
+>>> b = 200
+>>> 
+>>> a,b = b,a
+>>> a
+200
+>>> b
+100
+>>> #-> 값이 바뀜
+>>> 
+>>> a = 1,2,3
+>>> a[0]
+1
+>>> a[0:2]
+(1, 2)
+>>> 
+>>> 
+>>> 
+>>> # 딕셔너리
+>>> 
+>>> a = {}
+>>> type(a)
+<class 'dict'>
+>>> #-> 중괄호, 상당히 많이 쓰이며 중요
+>>> 
+>>> a = {"키":"값"}
+>>> 
+>>> ㅁ
+Traceback (most recent call last):
+  File "<pyshell#150>", line 1, in <module>
+    ㅁ
+NameError: name 'ᄆ' is not defined
+>>> a
+{'키': '값'}
+>>> type(a)
+<class 'dict'>
+>>> 
+>>> a = {"name":"홍길동", "age":30}
+>>> 
+>>> a
+{'name': '홍길동', 'age': 30}
+>>> 
+>>> 
+>>> a["name"] = "가가멜"
+>>> a
+{'name': '가가멜', 'age': 30}
+>>> 
+>>> #-> 키는 중복 안됨
+>>>  del a["name"]
+SyntaxError: unexpected indent
+>>> del a["name"]
+>>> 
+>>> a
+{'age': 30}
+>>> a["name"] = "홍길동"
+>>> 
+>>> a
+{'age': 30, 'name': '홍길동'}
+>>> 
+>>> a.pop("name")
+'홍길동'
+>>> 
+>>> a
+{'age': 30}
+>>> 
+>>> 
+>>> a = {"name":"홍길동"}
+>>> b = {"age":30}
+>>> c = {"country":"한국"}
+>>> 
+>>> ㅁ
+Traceback (most recent call last):
+  File "<pyshell#180>", line 1, in <module>
+    ㅁ
+NameError: name 'ᄆ' is not defined
+>>> a
+{'name': '홍길동'}
+>>> 
+>>> b
+{'age': 30}
+>>> 
+>>> c
+{'country': '한국'}
+>>> 
+>>> a.update(b)
+>>> a
+{'name': '홍길동', 'age': 30}
+>>> a.update(c)
+>>> a
+{'name': '홍길동', 'age': 30, 'country': '한국'}
+>>> 
+>>> 
+>>> 
+>>> a = {"친구들":["홍길동","가가멜"]}
+>>> 
+>>> ㅁ
+Traceback (most recent call last):
+  File "<pyshell#196>", line 1, in <module>
+    ㅁ
+NameError: name 'ᄆ' is not defined
+>>> a
+{'친구들': ['홍길동', '가가멜']}
+>>> 
+>>> 
+>>> a = {"홍길동":"도적", "가제트":"형사", "아즈라엘":"고양이"}
+>>> a.keys()
+dict_keys(['홍길동', '가제트', '아즈라엘'])
+>>> a.values()
+dict_values(['도적', '형사', '고양이'])
+>>> #-> 반복문에서 사용
+>>> 
+>>> 
+>>> 
+>>> a["홍길동"]
+'도적'
+>>> a["가가가"]
+Traceback (most recent call last):
+  File "<pyshell#208>", line 1, in <module>
+    a["가가가"]
+KeyError: '가가가'
+>>> 
+>>> a.get("가가가")
+>>> 
+>>> print(a.get("가가가"))
+None
+>>> a.get("홍길동")
+'도적'
+>>> # get 은 없어도 오류 나지 않음
+>>> # 상황에 맞게 사용
+>>> 
+>>> "홍길동" in a
+True
+>>> "김길동" in a
+False
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> #짐합
+>>> 
+>>> a = set()
+>>> type(a)
+<class 'set'>
+>>> 
+>>> a = {1,2,3}
+>>> type(a)
+<class 'set'>
+>>> 
+>>> a = {0,0,0,1,2,3}
+>>> a
+{0, 1, 2, 3}
+>>> # 집합은 중복을 허용하지 X
+>>> 
+>>> a = set{[1,2,3,4]}
+SyntaxError: invalid syntax
+>>> a = set([1,2,3,4])
+>>> a
+{1, 2, 3, 4}
+>>> b = set([3,4,5,6])
+>>> 
+>>> b
+{3, 4, 5, 6}
+>>> 
+>>> a&b
+{3, 4}
+>>> 
+>>> a | b
+{1, 2, 3, 4, 5, 6}
+>>> 
+>>> a -b
+{1, 2}
+>>> 
+>>> 
+>>> a.add(6)
+>>> a
+{1, 2, 3, 4, 6}
+>>> 
+>>> a.add(7)
+>>> a
+{1, 2, 3, 4, 6, 7}
+>>> 
+>>> a.remove(3)
+>>> 
+>>> a
+{1, 2, 4, 6, 7}
+>>> 
+>>> a.update([5,6,7,8])
+>>> a
+{1, 2, 4, 5, 6, 7, 8}
+>>> 
+>>> 
+>>> # 자료형 강제 형변환
+>>> 
+>>> a = [1,2,3,4,5,5,5]
+>>> a
+[1, 2, 3, 4, 5, 5, 5]
+>>> # 중복  제거
+>>> set(a)
+{1, 2, 3, 4, 5}
+>>> a
+[1, 2, 3, 4, 5, 5, 5]
+>>> list(set(a))
+[1, 2, 3, 4, 5]
+>>> a
+[1, 2, 3, 4, 5, 5, 5]
+>>> 
+>>> 
+>>> 
+>>> a = "10"
+>>> type(a)
+<class 'str'>
+>>> 
+>>> b = int(a)
+>>> b
+10
+>>> type(b)
+<class 'int'>
+>>> 
+>>> a
+'10'
+>>> 
+>>> a = 10
+>>> b = 2
+>>> a/b
+5.0
+>>> 
+>>> c = a/b
+>>> type(c)
+<class 'float'>
+>>> 
+>>> c = int(a/b)
+>>> c
+5
+>>> type(c)
+<class 'int'>
+>>> 
+>>> b = float(a)
+>>> b
+10.0
+>>> 
+>>> a = "10.1"
+>>> type(a)
+<class 'str'>
+>>> int(a)
+Traceback (most recent call last):
+  File "<pyshell#302>", line 1, in <module>
+    int(a)
+ValueError: invalid literal for int() with base 10: '10.1'
+>>> 
+>>> 

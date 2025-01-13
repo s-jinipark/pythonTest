@@ -1,0 +1,29 @@
+
+1. 매크로 설치
+  https://github.com/needleworm/pywinmacro
+
+2. 라이브러리 설치
+  pip install pywin32 pyperclip
+
+3. 매크로 사용하기 위한 방법
+  코드를 실행시킬 폴더로 이동해서 그 폴더에 < pywinmacro.py > 를 복사한다
+  그리고 아래와 같이 import
+    >>> import  pywinmacro as pw
+
+
+(오류 발생)
+import pyperclip
+ModuleNotFoundError: No module named 'pyperclip'
+
+(터미널에서)
+PS D:\dev\workspaces\pycharm\automatic_6months> pip install pyperclip
+Collecting pyperclip
+  Downloading pyperclip-1.8.2.tar.gz (20 kB)
+Building wheels for collected packages: pyperclip
+  Building wheel for pyperclip (setup.py) ... done
+  Created wheel for pyperclip: filename=pyperclip-1.8.2-py3-none-any.whl size=11113 sha256=f75f03c6d7f342c02d9ae81643e2a36babb7865ff7b59adbb48956efb14662c7
+  Stored in directory: c:\users\jini\appdata\local\pip\cache\wheels\9f\18\84\8f69f8b08169c7bae2dde6bd7daf0c19fca8c8e500ee620a28
+Successfully built pyperclip
+Installing collected packages: pyperclip
+Successfully installed pyperclip-1.8.2
+

@@ -1,0 +1,16 @@
+[config]
+a_list=[1, 2, 3, 4, 5]
+
+[Bar]
+files_to_check = [
+     "/path/to/file1",
+     "/path/to/file2",
+     "/path/to/another file with space in the name"
+     ]
+
+[Counter]
+counter_list = [
+     "/path/to/file1",
+     "/path/to/file2",
+     "/path/to/another file with space in the name"
+     ]
